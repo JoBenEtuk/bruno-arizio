@@ -10,7 +10,7 @@ export default class extends Page {
   /**
    * Create.
    */
-  create () {
+  create() {
     this.element = document.querySelector('.essays')
 
     this.elements = {
@@ -32,29 +32,32 @@ export default class extends Page {
     this.createScroll()
   }
 
-  createAnimations () {
+  createAnimations() {
     this.animations = {}
 
-    each([
-      this.elements.title,
-      this.elements.description,
-      ...this.elements.aboutDescriptions,
-      ...this.elements.aboutSubtitles,
-      ...this.elements.aboutLinks
-    ], (element, index) => {
-      this.animations[`animation_${index}`] = new Text({
-        append: true,
-        element
-      })
+    each(
+      [
+        this.elements.title,
+        this.elements.description,
+        ...this.elements.aboutDescriptions,
+        ...this.elements.aboutSubtitles,
+        ...this.elements.aboutLinks,
+      ],
+      (element, index) => {
+        this.animations[`animation_${index}`] = new Text({
+          append: true,
+          element,
+        })
 
-      element.setAttribute('data-scroll', '')
-      element.setAttribute('data-scroll-call', `animation_${index}`)
-      element.setAttribute('data-scroll-offset', '15%')
-    })
+        element.setAttribute('data-scroll', '')
+        element.setAttribute('data-scroll-call', `animation_${index}`)
+        element.setAttribute('data-scroll-offset', '15%')
+      },
+    )
 
     each(this.elements.listWrappers, (element, index) => {
       this.animations[`animation_list_${index}`] = new Appear({
-        element
+        element,
       })
 
       element.setAttribute('data-scroll', '')
@@ -62,13 +65,13 @@ export default class extends Page {
     })
   }
 
-  createLinks () {
+  createLinks() {
     const linksDescription = this.element.querySelectorAll('.essays__description a')
 
-    each(linksDescription, link => {
+    each(linksDescription, (link) => {
       link.classList.add('essays__description__link')
 
-      link.setAttribute('data-link',' ')
+      link.setAttribute('data-link', ' ')
 
       link.innerHTML = `
         ${link.innerHTML}
@@ -81,10 +84,10 @@ export default class extends Page {
 
     const linksBiography = this.element.querySelectorAll('.essays__about__description--biography a')
 
-    each(linksBiography, link => {
+    each(linksBiography, (link) => {
       link.classList.add('essays__about__link')
 
-      link.setAttribute('data-link',' ')
+      link.setAttribute('data-link', ' ')
 
       link.innerHTML = `
         ${link.innerHTML}
@@ -97,8 +100,8 @@ export default class extends Page {
 
     const linksItems = this.element.querySelectorAll('.essays__about__description__line a')
 
-    each(linksItems, link => {
-      link.setAttribute('data-link',' ')
+    each(linksItems, (link) => {
+      link.setAttribute('data-link', ' ')
 
       link.innerHTML = `
         ${link.innerHTML}
@@ -110,15 +113,15 @@ export default class extends Page {
     })
   }
 
-  createScroll () {
+  createScroll() {
     this.scroll = new Scroll({
       el: this.element,
       scrollbarClass: 'scrollbar',
       smooth: true,
-      smoothMobile: true
+      smoothMobile: true,
     })
 
-    this.scroll.on('call', id => {
+    this.scroll.on('call', (id) => {
       if (this.animations[id]) {
         this.animations[id].animateIn()
       }
@@ -128,7 +131,7 @@ export default class extends Page {
   /**
    * Events.
    */
-  onResize () {
+  onResize() {
     if (this.scroll) {
       this.scroll.update()
     }
@@ -137,21 +140,21 @@ export default class extends Page {
   /**
    * Animations.
    */
-  show () {
+  show() {
     this.timelineIn = new TimelineMax()
 
     this.timelineIn.to(this.element, 0.5, {
-      autoAlpha: 1
+      autoAlpha: 1,
     })
 
     return super.show(this.timelineIn)
   }
 
-  hide () {
+  hide() {
     this.timelineOut = new TimelineMax()
 
     this.timelineOut.to(this.element, 0.5, {
-      autoAlpha: 0
+      autoAlpha: 0,
     })
 
     this.timelineOut.call(() => {
@@ -164,7 +167,7 @@ export default class extends Page {
   /**
    * Destroy.
    */
-  destroy () {
+  destroy() {
     if (this.scroll) {
       this.scroll.destroy()
     }

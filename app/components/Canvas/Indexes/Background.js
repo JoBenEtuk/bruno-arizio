@@ -1,15 +1,10 @@
-import {
-  Mesh,
-  PlaneBufferGeometry,
-  ShaderMaterial,
-  Vector2
-} from 'three'
+import { Mesh, PlaneBufferGeometry, ShaderMaterial, Vector2 } from 'three'
 
 import fragmentShader from 'shaders/background-frag.glsl'
 import vertexShader from 'shaders/background-vert.glsl'
 
 export default class extends Mesh {
-  constructor ({ covers, sizes }) {
+  constructor({ covers, sizes }) {
     super()
 
     this.covers = covers
@@ -22,7 +17,7 @@ export default class extends Mesh {
   /**
    * Create.
    */
-  createGeometry ({ environment }) {
+  createGeometry({ environment }) {
     this.height = environment.height
     this.width = environment.width
 
@@ -31,7 +26,7 @@ export default class extends Mesh {
     this.position.z = -150
   }
 
-  createMaterial ({ screen }) {
+  createMaterial({ screen }) {
     const [cover] = this.covers
     const { image } = cover
 
@@ -40,59 +35,59 @@ export default class extends Mesh {
       depthWrite: false,
       uniforms: {
         alpha: {
-          value: 1
+          value: 1,
         },
         displacementX: {
-          value: 0
+          value: 0,
         },
         displacementY: {
-          value: 0
+          value: 0,
         },
         distortion: {
-          value: 0
+          value: 0,
         },
         distortionX: {
-          value: 1.75
+          value: 1.75,
         },
         distortionY: {
-          value: 2.0
+          value: 2.0,
         },
         image: {
-          value: cover
+          value: cover,
         },
         imageResolution: {
-          value: new Vector2(image.width, image.height)
+          value: new Vector2(image.width, image.height),
         },
         isAnimating: {
-          value: 0
+          value: 0,
         },
         resolution: {
           type: 'v2',
-          value: new Vector2(screen.width, screen.height)
+          value: new Vector2(screen.width, screen.height),
         },
         scale: {
-          value: 0.2
+          value: 0.2,
         },
         time: {
-          value: 0
+          value: 0,
         },
         transition: {
-          value: null
+          value: null,
         },
         value: {
-          value: 0
-        }
+          value: 0,
+        },
       },
       transparent: true,
       fragmentShader,
-      vertexShader
+      vertexShader,
     })
   }
 
   /**
    * Events.
    */
-  onResize ({ sizes }) {
+  onResize({ sizes }) {
     this.sizes = sizes
 
     if (this.geometry) {
@@ -106,29 +101,41 @@ export default class extends Mesh {
   /**
    * Animations.
    */
-  show (pathname, onComplete) {
+  show(pathname, onComplete) {
     if (!pathname) {
       const ease = Power4.easeOut
 
       this.isAnimating = true
 
       this.timelineIn = new TimelineMax({
-        onComplete
+        onComplete,
       })
 
-      this.timelineIn.fromTo(this.position, 2, {
-        z: 0
-      }, {
-        ease,
-        z: -150
-      }, 'start')
+      this.timelineIn.fromTo(
+        this.position,
+        2,
+        {
+          z: 0,
+        },
+        {
+          ease,
+          z: -150,
+        },
+        'start',
+      )
 
-      this.timelineIn.fromTo(this.material.uniforms.scale, 2, {
-        value: 0.5
-      }, {
-        ease,
-        value: 0.2
-      }, 'start')
+      this.timelineIn.fromTo(
+        this.material.uniforms.scale,
+        2,
+        {
+          value: 0.5,
+        },
+        {
+          ease,
+          value: 0.2,
+        },
+        'start',
+      )
 
       this.timelineIn.call(() => {
         this.isAnimating = false
@@ -140,35 +147,59 @@ export default class extends Mesh {
 
       this.timelineIn = new TimelineMax()
 
-      this.timelineIn.fromTo(this.position, 2, {
-        y: -(this.sizes.environment.height * 1.33),
-        z: 0
-      }, {
-        ease,
-        y: 0,
-        z: -150
-      }, 'start')
+      this.timelineIn.fromTo(
+        this.position,
+        2,
+        {
+          y: -(this.sizes.environment.height * 1.33),
+          z: 0,
+        },
+        {
+          ease,
+          y: 0,
+          z: -150,
+        },
+        'start',
+      )
 
-      this.timelineIn.fromTo(this.material.uniforms.displacementY, 2, {
-        value: 0.1
-      }, {
-        ease,
-        value: 0
-      }, 'start')
+      this.timelineIn.fromTo(
+        this.material.uniforms.displacementY,
+        2,
+        {
+          value: 0.1,
+        },
+        {
+          ease,
+          value: 0,
+        },
+        'start',
+      )
 
-      this.timelineIn.fromTo(this.material.uniforms.distortion, 2, {
-        value: 5
-      }, {
-        ease,
-        value: 0
-      }, 'start')
+      this.timelineIn.fromTo(
+        this.material.uniforms.distortion,
+        2,
+        {
+          value: 5,
+        },
+        {
+          ease,
+          value: 0,
+        },
+        'start',
+      )
 
-      this.timelineIn.fromTo(this.material.uniforms.scale, 2, {
-        value: 0.5
-      }, {
-        ease,
-        value: 0.2
-      }, 'start')
+      this.timelineIn.fromTo(
+        this.material.uniforms.scale,
+        2,
+        {
+          value: 0.5,
+        },
+        {
+          ease,
+          value: 0.2,
+        },
+        'start',
+      )
 
       this.timelineIn.call(() => {
         this.isAnimating = false
@@ -176,35 +207,55 @@ export default class extends Mesh {
     }
   }
 
-  hide (pathname, onComplete) {
+  hide(pathname, onComplete) {
     if (pathname === 'about' || pathname === 'essays') {
-      return new Promise(resolve => {
+      return new Promise((resolve) => {
         const ease = Power4.easeOut
 
         this.timelineOut = new TimelineMax({
-          onComplete
+          onComplete,
         })
 
-        this.timelineOut.to(this.position, 2, {
-          ease,
-          y: this.sizes.environment.height * 1.33,
-          z: 0
-        }, 'start')
+        this.timelineOut.to(
+          this.position,
+          2,
+          {
+            ease,
+            y: this.sizes.environment.height * 1.33,
+            z: 0,
+          },
+          'start',
+        )
 
-        this.timelineOut.to(this.material.uniforms.displacementY, 2, {
-          ease,
-          value: 0.1
-        }, 'start')
+        this.timelineOut.to(
+          this.material.uniforms.displacementY,
+          2,
+          {
+            ease,
+            value: 0.1,
+          },
+          'start',
+        )
 
-        this.timelineOut.to(this.material.uniforms.distortion, 2, {
-          ease,
-          value: 5
-        }, 'start')
+        this.timelineOut.to(
+          this.material.uniforms.distortion,
+          2,
+          {
+            ease,
+            value: 5,
+          },
+          'start',
+        )
 
-        this.timelineOut.to(this.material.uniforms.scale, 2, {
-          ease,
-          value: 0.5
-        }, 'start')
+        this.timelineOut.to(
+          this.material.uniforms.scale,
+          2,
+          {
+            ease,
+            value: 0.5,
+          },
+          'start',
+        )
 
         this.timelineOut.call(() => {
           resolve()
@@ -220,7 +271,7 @@ export default class extends Mesh {
   /**
    * Set.
    */
-  set (index) {
+  set(index) {
     this.index = index
 
     if (this.covers) {
@@ -232,7 +283,7 @@ export default class extends Mesh {
   /**
    * Update.
    */
-  change (index) {
+  change(index) {
     if (this.isAnimating || this.index === index) {
       return
     }
@@ -248,12 +299,17 @@ export default class extends Mesh {
       this.material.uniforms.transition.value = this.covers[index]
     })
 
-    this.timeline.fromTo(this.material.uniforms.value, 1, {
-      value: 0
-    }, {
-      ease: Power3.easeInOut,
-      value: 1
-    })
+    this.timeline.fromTo(
+      this.material.uniforms.value,
+      1,
+      {
+        value: 0,
+      },
+      {
+        ease: Power3.easeInOut,
+        value: 1,
+      },
+    )
 
     this.timeline.call(() => {
       this.material.uniforms.isAnimating.value = 0
@@ -266,26 +322,26 @@ export default class extends Mesh {
   /**
    * Update.
    */
-  update (index) {
+  update(index) {
     this.change(index)
   }
 
   /**
    * Destroy.
    */
-  destroyGeometry () {
+  destroyGeometry() {
     if (this.geometry) {
       this.geometry.dispose()
     }
   }
 
-  destroyMaterial () {
+  destroyMaterial() {
     if (this.material) {
       this.material.dispose()
     }
   }
 
-  destroy () {
+  destroy() {
     this.destroyGeometry()
     this.destroyMaterial()
   }

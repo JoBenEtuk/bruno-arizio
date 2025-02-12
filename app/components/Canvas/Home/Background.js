@@ -1,9 +1,4 @@
-import {
-  Mesh,
-  PlaneBufferGeometry,
-  ShaderMaterial,
-  Vector2
-} from 'three'
+import { Mesh, PlaneBufferGeometry, ShaderMaterial, Vector2 } from 'three'
 
 import fragmentShader from 'shaders/image-frag.glsl'
 import vertexShader from 'shaders/image-vert.glsl'
@@ -11,7 +6,7 @@ import vertexShader from 'shaders/image-vert.glsl'
 import { map } from 'utils/math'
 
 export default class extends Mesh {
-  constructor ({ cover, index, sizes }) {
+  constructor({ cover, index, sizes }) {
     super()
 
     this.index = index
@@ -24,7 +19,7 @@ export default class extends Mesh {
   /**
    * Create.
    */
-  createGeometry ({ environment }) {
+  createGeometry({ environment }) {
     this.height = environment.height
     this.width = environment.width
 
@@ -33,70 +28,70 @@ export default class extends Mesh {
     this.position.z = -0.01
   }
 
-  createMaterial (cover, { screen }) {
+  createMaterial(cover, { screen }) {
     this.material = new ShaderMaterial({
       depthTest: false,
       depthWrite: false,
       uniforms: {
         alpha: {
-          value: 1
+          value: 1,
         },
         displacementX: {
-          value: 0
+          value: 0,
         },
         displacementY: {
-          value: 0
+          value: 0,
         },
         distortion: {
-          value: 0
+          value: 0,
         },
         distortionX: {
-          value: 1.75
+          value: 1.75,
         },
         distortionY: {
-          value: 2.0
+          value: 2.0,
         },
         image: {
-          value: cover
+          value: cover,
         },
         imageResolution: {
-          value: new Vector2(cover.image.width, cover.image.height)
+          value: new Vector2(cover.image.width, cover.image.height),
         },
         resolution: {
           type: 'v2',
-          value: new Vector2(screen.width, screen.height)
+          value: new Vector2(screen.width, screen.height),
         },
         scale: {
-          value: 0
+          value: 0,
         },
         time: {
-          value: 0
-        }
+          value: 0,
+        },
       },
       transparent: true,
       fragmentShader,
-      vertexShader
+      vertexShader,
     })
   }
 
   /**
    * Events.
    */
-  onTouchStart () {
+  onTouchStart() {
     TweenMax.to(this.material.uniforms.displacementY, 0.4, {
-      value: 0.1
+      value: 0.1,
     })
   }
 
-  onTouchEnd () {
+  onTouchEnd() {
     TweenMax.killTweensOf(this.material.uniforms.displacementY)
 
     TweenMax.to(this.material.uniforms.displacementY, 0.4, {
-      value: 0
+      value: 0,
     })
   }
 
-  onResize ({ sizes }) {
+  onResize({ sizes }) {
     this.sizes = sizes
 
     if (this.geometry) {
@@ -112,7 +107,7 @@ export default class extends Mesh {
   /**
    * Animations.
    */
-  show (isCurrent, pathname) {
+  show(isCurrent, pathname) {
     if (!isCurrent) {
       return
     }
@@ -124,35 +119,59 @@ export default class extends Mesh {
 
       this.timelineIn = new TimelineMax()
 
-      this.timelineIn.fromTo(this.position, 2, {
-        y: -(this.sizes.environment.height * 1.33),
-        z: -50
-      }, {
-        ease,
-        y: 0,
-        z: 0
-      }, 'start')
+      this.timelineIn.fromTo(
+        this.position,
+        2,
+        {
+          y: -(this.sizes.environment.height * 1.33),
+          z: -50,
+        },
+        {
+          ease,
+          y: 0,
+          z: 0,
+        },
+        'start',
+      )
 
-      this.timelineIn.fromTo(this.material.uniforms.displacementY, 2, {
-        value: 0.1
-      }, {
-        ease,
-        value: 0
-      }, 'start')
+      this.timelineIn.fromTo(
+        this.material.uniforms.displacementY,
+        2,
+        {
+          value: 0.1,
+        },
+        {
+          ease,
+          value: 0,
+        },
+        'start',
+      )
 
-      this.timelineIn.fromTo(this.material.uniforms.distortion, 2, {
-        value: 5
-      }, {
-        ease,
-        value: 0
-      }, 'start')
+      this.timelineIn.fromTo(
+        this.material.uniforms.distortion,
+        2,
+        {
+          value: 5,
+        },
+        {
+          ease,
+          value: 0,
+        },
+        'start',
+      )
 
-      this.timelineIn.fromTo(this.material.uniforms.scale, 2, {
-        value: 0.5
-      }, {
-        ease,
-        value: 0
-      }, 'start')
+      this.timelineIn.fromTo(
+        this.material.uniforms.scale,
+        2,
+        {
+          value: 0.5,
+        },
+        {
+          ease,
+          value: 0,
+        },
+        'start',
+      )
 
       this.timelineIn.call(() => {
         this.isAnimating = false
@@ -160,38 +179,58 @@ export default class extends Mesh {
     }
   }
 
-  hide (isCurrent, pathname, onComplete) {
+  hide(isCurrent, pathname, onComplete) {
     if (pathname === 'about' || pathname === 'essays') {
       if (isCurrent) {
-        return new Promise(resolve => {
+        return new Promise((resolve) => {
           const ease = Power4.easeOut
 
           this.isAnimating = true
 
           this.timelineOut = new TimelineMax({
-            onComplete
+            onComplete,
           })
 
-          this.timelineOut.to(this.position, 2, {
-            ease,
-            y: this.sizes.environment.height * 1.33,
-            z: -50
-          }, 'start')
+          this.timelineOut.to(
+            this.position,
+            2,
+            {
+              ease,
+              y: this.sizes.environment.height * 1.33,
+              z: -50,
+            },
+            'start',
+          )
 
-          this.timelineOut.to(this.material.uniforms.displacementY, 2, {
-            ease,
-            value: 0.1
-          }, 'start')
+          this.timelineOut.to(
+            this.material.uniforms.displacementY,
+            2,
+            {
+              ease,
+              value: 0.1,
+            },
+            'start',
+          )
 
-          this.timelineOut.to(this.material.uniforms.distortion, 2, {
-            ease,
-            value: 5
-          }, 'start')
+          this.timelineOut.to(
+            this.material.uniforms.distortion,
+            2,
+            {
+              ease,
+              value: 5,
+            },
+            'start',
+          )
 
-          this.timelineOut.to(this.material.uniforms.scale, 2, {
-            ease,
-            value: 0.5
-          }, 'start')
+          this.timelineOut.to(
+            this.material.uniforms.scale,
+            2,
+            {
+              ease,
+              value: 0.5,
+            },
+            'start',
+          )
 
           this.timelineOut.call(() => {
             this.isAnimating = false
@@ -214,7 +253,7 @@ export default class extends Mesh {
   /**
    * Update.
    */
-  update (percent) {
+  update(percent) {
     if (this.isAnimating) {
       return
     }
@@ -227,26 +266,26 @@ export default class extends Mesh {
     this.position.z = map(percentAbsolute, 0, 1, -0.01, -50)
   }
 
-  animate (time) {
+  animate(time) {
     this.material.uniforms.time.value = time
   }
 
   /**
    * Destroy.
    */
-  destroyGeometry () {
+  destroyGeometry() {
     if (this.geometry) {
       this.geometry.dispose()
     }
   }
 
-  destroyMaterial () {
+  destroyMaterial() {
     if (this.material) {
       this.material.dispose()
     }
   }
 
-  destroy () {
+  destroy() {
     this.destroyGeometry()
     this.destroyMaterial()
   }

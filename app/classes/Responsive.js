@@ -1,31 +1,31 @@
 import { Detection } from 'classes/Detection'
 
 export default class {
-  constructor () {
+  constructor() {
     this.onResize()
   }
 
-  onResize () {
+  onResize() {
     const sizes = {
       height: window.innerHeight,
-      width: window.innerWidth
+      width: window.innerWidth,
     }
 
     const multiplier = 10
 
     const desktop = {
       height: 900,
-      width: 1600
+      width: 1600,
     }
 
     const tablet = {
       height: 900,
-      width: 1600
+      width: 1600,
     }
 
     const mobile = {
       height: 736,
-      width: 414
+      width: 414,
     }
 
     let { height, width } = mobile

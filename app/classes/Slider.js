@@ -6,7 +6,7 @@ import { Detection } from 'classes/Detection'
 import { getOffset } from 'utils/dom'
 
 export default class extends EventEmitter {
-  constructor ({ element, elements, target = 0 }) {
+  constructor({ element, elements, target = 0 }) {
     super()
 
     this.element = element
@@ -16,12 +16,12 @@ export default class extends EventEmitter {
       position: 0,
       current: 0,
       target,
-      last: 0
+      last: 0,
     }
 
     this.onLeft()
 
-    each(this.elements.buttons, button => {
+    each(this.elements.buttons, (button) => {
       button.offset = getOffset(button).left
       button.position = 0
     })
@@ -29,33 +29,33 @@ export default class extends EventEmitter {
     this.update()
   }
 
-  onLeft () {
+  onLeft() {
     this.direction = 'left'
     this.speed = Detection.isPhone ? 1 : 7.5
   }
 
-  onRight () {
+  onRight() {
     this.direction = 'right'
     this.speed = Detection.isPhone ? -1 : -7.5
   }
 
-  update () {
+  update() {
     if (!this.isDown) {
       this.scroll.target += this.speed
     }
 
     this.scroll.current += (this.scroll.target - this.scroll.current) * 0.1
 
-    each(this.elements.items, item => {
+    each(this.elements.items, (item) => {
       TweenMax.set(item, {
-        x: -this.scroll.current
+        x: -this.scroll.current,
       })
     })
 
     each(this.elements.buttons, (element, index) => {
       const { clientWidth } = this.element
 
-      const position = (element.offset + element.position + element.clientWidth - this.scroll.current)
+      const position = element.offset + element.position + element.clientWidth - this.scroll.current
 
       element.isBefore = position < 0
       element.isAfter = position > clientWidth
@@ -67,7 +67,7 @@ export default class extends EventEmitter {
         element.isAfter = false
 
         TweenMax.set(element, {
-          x: element.position
+          x: element.position,
         })
       }
 
@@ -78,7 +78,7 @@ export default class extends EventEmitter {
         element.isAfter = false
 
         TweenMax.set(element, {
-          x: element.position
+          x: element.position,
         })
       }
     })
@@ -88,31 +88,31 @@ export default class extends EventEmitter {
     this.frame = requestAnimationFrame(this.update.bind(this))
   }
 
-  onResize () {
+  onResize() {
     this.scroll = {
       position: 0,
       current: 0,
       target: 0,
-      last: 0
+      last: 0,
     }
 
-    each(this.elements.items, item => {
+    each(this.elements.items, (item) => {
       TweenMax.set(item, {
-        clearProps: 'x'
+        clearProps: 'x',
       })
     })
 
-    each(this.elements.buttons, button => {
+    each(this.elements.buttons, (button) => {
       button.offset = getOffset(button).left
       button.position = 0
 
       TweenMax.set(button, {
-        clearProps: 'x'
+        clearProps: 'x',
       })
     })
   }
 
-  destroy () {
+  destroy() {
     window.cancelAnimationFrame(this.frame)
   }
 }

@@ -6,12 +6,10 @@ export default class extends Page {
   /**
    * Create.
    */
-  create () {
+  create() {
     this.element = document.querySelector('.index')
 
-    this.elements = {
-
-    }
+    this.elements = {}
 
     if (Detection.isSafari) {
       this.element.classList.add('index--safari')
@@ -21,21 +19,21 @@ export default class extends Page {
   /**
    * Animations.
    */
-  show () {
+  show() {
     this.timelineIn = new TimelineMax()
 
     this.timelineIn.to(this.element, 0.5, {
-      autoAlpha: 1
+      autoAlpha: 1,
     })
 
     return super.show(this.timelineIn)
   }
 
-  hide () {
+  hide() {
     this.timelineOut = new TimelineMax()
 
     this.timelineOut.to(this.element, 0.5, {
-      autoAlpha: 0
+      autoAlpha: 0,
     })
 
     this.timelineOut.call(() => {
@@ -48,7 +46,5 @@ export default class extends Page {
   /**
    * Destroy.
    */
-  destroy () {
-
-  }
+  destroy() {}
 }

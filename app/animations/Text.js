@@ -1,20 +1,20 @@
 import { calculate, split } from 'utils/text'
 
 export default class {
-  constructor ({ append = false, delay = 0, element }) {
+  constructor({ append = false, delay = 0, element }) {
     this.delay = delay
     this.element = element
 
     split({
       append,
       element,
-      expression: ' '
+      expression: ' ',
     })
 
     split({
       append,
       element,
-      expression: ' '
+      expression: ' ',
     })
 
     this.spans = this.element.querySelectorAll('span span')
@@ -22,19 +22,24 @@ export default class {
     this.animateOut()
   }
 
-  animateIn () {
-    TweenMax.staggerTo(calculate(this.spans), 1.5, {
-      autoAlpha: 1,
-      delay: this.delay,
-      ease: Power4.easeOut,
-      y: '0%'
-    }, 0.1)
+  animateIn() {
+    TweenMax.staggerTo(
+      calculate(this.spans),
+      1.5,
+      {
+        autoAlpha: 1,
+        delay: this.delay,
+        ease: Power4.easeOut,
+        y: '0%',
+      },
+      0.1,
+    )
   }
 
-  animateOut () {
+  animateOut() {
     TweenMax.set(this.spans, {
       autoAlpha: 0,
-      y: '100%'
+      y: '100%',
     })
   }
 }

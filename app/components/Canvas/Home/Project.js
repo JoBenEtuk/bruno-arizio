@@ -4,11 +4,11 @@ import Background from './Background'
 import Title from './Title'
 
 export default class extends Group {
-  constructor ({ cover, fill, index, sizes }) {
+  constructor({ cover, fill, index, sizes }) {
     super()
 
     this.index = index
-    this.location = (sizes.environment.height * 1.33) * this.index * -1
+    this.location = sizes.environment.height * 1.33 * this.index * -1
     this.sizes = sizes
 
     this.position.y = this.location
@@ -20,48 +20,48 @@ export default class extends Group {
   /**
    * Create.
    */
-  createBackground (cover) {
+  createBackground(cover) {
     this.background = new Background({
       cover,
       index: this.index,
-      sizes: this.sizes
+      sizes: this.sizes,
     })
   }
 
-  createTitle (fill) {
+  createTitle(fill) {
     this.title = new Title({
       fill,
       index: this.index,
-      sizes: this.sizes
+      sizes: this.sizes,
     })
   }
 
   /**
    * Events.
    */
-  onTouchStart () {
+  onTouchStart() {
     if (this.background) {
       this.background.onTouchStart()
     }
   }
 
-  onTouchEnd () {
+  onTouchEnd() {
     this.background.onTouchEnd()
   }
 
-  onResize ({ fill, sizes }) {
+  onResize({ fill, sizes }) {
     this.sizes = sizes
 
     if (this.background) {
       this.background.onResize({
-        sizes
+        sizes,
       })
     }
 
     if (this.title) {
       this.title.onResize({
         fill,
-        sizes
+        sizes,
       })
     }
   }
@@ -69,7 +69,7 @@ export default class extends Group {
   /**
    * Animations.
    */
-  show (isCurrent, pathname) {
+  show(isCurrent, pathname) {
     this.add(this.background)
     this.add(this.title)
 
@@ -77,7 +77,7 @@ export default class extends Group {
     this.title.show(isCurrent, pathname)
   }
 
-  hide (isCurrent, pathname, page) {
+  hide(isCurrent, pathname, page) {
     let promises = []
 
     if (this.background) {
@@ -108,7 +108,7 @@ export default class extends Group {
   /**
    * Update.
    */
-  update (scroll) {
+  update(scroll) {
     const percent = this.position.y / this.sizes.environment.height
 
     this.position.y = this.location + scroll
@@ -122,7 +122,7 @@ export default class extends Group {
     }
   }
 
-  animate (time) {
+  animate(time) {
     if (this.background) {
       this.background.animate(time)
     }
@@ -131,19 +131,19 @@ export default class extends Group {
   /**
    * Destroy.
    */
-  destroyBackground () {
+  destroyBackground() {
     if (this.background) {
       this.background.destroy()
     }
   }
 
-  destroyTitle () {
+  destroyTitle() {
     if (this.title) {
       this.title.destroy()
     }
   }
 
-  destroy () {
+  destroy() {
     this.destroyBackground()
     this.destroyTitle()
   }

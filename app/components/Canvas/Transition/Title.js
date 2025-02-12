@@ -1,9 +1,4 @@
-import {
-  AdditiveBlending,
-  Mesh,
-  PlaneBufferGeometry,
-  ShaderMaterial
-} from 'three'
+import { AdditiveBlending, Mesh, PlaneBufferGeometry, ShaderMaterial } from 'three'
 
 import fragmentShader from 'shaders/title-frag.glsl'
 import vertexShader from 'shaders/title-vert.glsl'
@@ -11,7 +6,7 @@ import vertexShader from 'shaders/title-vert.glsl'
 import { Detection } from 'classes/Detection'
 
 export default class extends Mesh {
-  constructor ({ fill, index, sizes, stroke }) {
+  constructor({ fill, index, sizes, stroke }) {
     super()
 
     this.index = index
@@ -24,9 +19,9 @@ export default class extends Mesh {
   /**
    * Create.
    */
-  createGeometry ({ image }, { environment, ratio, screen }) {
-    const ratioHeight = (image.height * ratio / screen.height / 2)
-    const ratioWidth = (image.width * ratio / screen.width / 2)
+  createGeometry({ image }, { environment, ratio, screen }) {
+    const ratioHeight = (image.height * ratio) / screen.height / 2
+    const ratioWidth = (image.width * ratio) / screen.width / 2
 
     this.height = environment.height * ratioHeight
     this.width = environment.width * ratioWidth
@@ -34,44 +29,44 @@ export default class extends Mesh {
     this.geometry = new PlaneBufferGeometry(this.width, this.height, 100, 50)
   }
 
-  createMaterial (fill, stroke) {
+  createMaterial(fill, stroke) {
     this.material = new ShaderMaterial({
       blending: AdditiveBlending,
       depthTest: false,
       depthWrite: false,
       uniforms: {
         alpha: {
-          value: 0
+          value: 0,
         },
         distortion: {
-          value: 0
+          value: 0,
         },
         distortionX: {
-          value: fill.image.width > screen.width ? 1.4 : 1.75
+          value: fill.image.width > screen.width ? 1.4 : 1.75,
         },
         distortionY: {
-          value: 2
+          value: 2,
         },
         image: {
-          value: fill
+          value: fill,
         },
         stroke: {
-          value: stroke
+          value: stroke,
         },
         transition: {
-          value: 0
-        }
+          value: 0,
+        },
       },
       transparent: true,
       fragmentShader,
-      vertexShader
+      vertexShader,
     })
   }
 
   /**
    * Events.
    */
-  onResize ({ fill, sizes, stroke }) {
+  onResize({ fill, sizes, stroke }) {
     this.sizes = sizes
 
     if (this.geometry) {
@@ -88,19 +83,19 @@ export default class extends Mesh {
   /**
    * Destroy.
    */
-  destroyGeometry () {
+  destroyGeometry() {
     if (this.geometry) {
       this.geometry.dispose()
     }
   }
 
-  destroyMaterial () {
+  destroyMaterial() {
     if (this.material) {
       this.material.dispose()
     }
   }
 
-  destroy () {
+  destroy() {
     this.destroyGeometry()
     this.destroyMaterial()
   }

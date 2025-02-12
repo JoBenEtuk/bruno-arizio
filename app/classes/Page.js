@@ -2,18 +2,18 @@ import EventEmitter from 'events'
 import { clamp } from 'lodash'
 
 export default class extends EventEmitter {
-  constructor () {
+  constructor() {
     super()
 
     this.y = {
       current: 0,
       start: 0,
-      end: 0
+      end: 0,
     }
   }
 
-  show (animation = new TimelineMax()) {
-    return new Promise(resolve => {
+  show(animation = new TimelineMax()) {
+    return new Promise((resolve) => {
       animation.call(() => {
         resolve()
       })
@@ -22,8 +22,8 @@ export default class extends EventEmitter {
     })
   }
 
-  hide (animation = new TimelineMax()) {
-    return new Promise(resolve => {
+  hide(animation = new TimelineMax()) {
+    return new Promise((resolve) => {
       this.removeEventListeners()
 
       animation.call(() => {
@@ -32,14 +32,14 @@ export default class extends EventEmitter {
     })
   }
 
-  onMouseDown ({ clientY }) {
+  onMouseDown({ clientY }) {
     this.isMouseDown = true
 
     this.y.start = clientY
     this.y.current = this.scroll.scroll.instance.scroll.y
   }
 
-  onMouseMove ({ clientY }) {
+  onMouseMove({ clientY }) {
     if (!this.isMouseDown) {
       return
     }
@@ -55,11 +55,11 @@ export default class extends EventEmitter {
     scroll.checkScroll()
   }
 
-  onMouseUp ({ clientY }) {
+  onMouseUp({ clientY }) {
     this.isMouseDown = false
   }
 
-  addEventListeners () {
+  addEventListeners() {
     if (this.scroll) {
       this.onMouseDownEvent = this.onMouseDown.bind(this)
       this.onMouseMoveEvent = this.onMouseMove.bind(this)
@@ -71,7 +71,7 @@ export default class extends EventEmitter {
     }
   }
 
-  removeEventListeners () {
+  removeEventListeners() {
     if (this.scroll) {
       window.removeEventListener('mousedown', this.onMouseDownEvent)
       window.removeEventListener('mousemove', this.onMouseMoveEvent)

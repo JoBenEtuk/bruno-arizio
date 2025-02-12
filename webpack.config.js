@@ -12,112 +12,89 @@ const dirStyles = path.join(__dirname, 'styles')
 const dirNode = 'node_modules'
 
 module.exports = {
-  entry: [
-    path.join(dirApp, 'index.js'),
-    path.join(dirStyles, 'index.scss')
-  ],
+  entry: [path.join(dirApp, 'index.js'), path.join(dirStyles, 'index.scss')],
 
   resolve: {
-    modules: [
-      dirApp,
-      dirAssets,
-      dirNode
-    ]
+    modules: [dirApp, dirAssets, dirNode],
   },
 
   plugins: [
     new webpack.DefinePlugin({
-      IS_DEVELOPMENT
+      IS_DEVELOPMENT,
     }),
 
-    new webpack.ProvidePlugin({
+    new webpack.ProvidePlugin({}),
 
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: './shared',
+          to: '',
+        },
+      ],
     }),
-
-    new CopyWebpackPlugin([
-      {
-        from: './shared',
-        to: ''
-      }
-    ]),
 
     new MiniCssExtractPlugin({
       filename: '[name].css',
-      chunkFilename: '[id].css'
-    })
+      chunkFilename: '[id].css',
+    }),
   ],
 
   module: {
     rules: [
       {
-        test: /\.pug$/,
-        use: ['pug-loader']
-      },
-
-      {
         test: /\.js$/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: [
-              [
-                '@babel/preset-env'
-              ]
-            ]
-          }
-        }
+        },
       },
 
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '',
+            },
+          },
           {
             loader: 'css-loader',
             options: {
-              sourceMap: IS_DEVELOPMENT
-            }
+              sourceMap: false,
+            },
           },
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap: IS_DEVELOPMENT
-            }
+              sourceMap: false,
+            },
           },
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: IS_DEVELOPMENT
-            }
-          }
-        ]
+              sourceMap: false,
+            },
+          },
+        ],
       },
 
       {
-        test: /\.(jpe?g|png|gif|svg|woff2?)$/,
-        loader: 'file-loader',
-        options: {
-          name (file) {
-            if (IS_DEVELOPMENT) {
-              return '[path][name].[ext]'
-            }
-
-            return '[hash].[ext]'
-          }
-        }
+        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2|webp)(\?.*$|$)/i,
+        type: 'asset',
       },
 
       {
         test: /\.(glsl|frag|vert)$/,
         loader: 'raw-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
 
       {
         test: /\.(glsl|frag|vert)$/,
         loader: 'glslify-loader',
-        exclude: /node_modules/
-      }
-    ]
-  }
+        exclude: /node_modules/,
+      },
+    ],
+  },
 }

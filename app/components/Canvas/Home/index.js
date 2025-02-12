@@ -4,7 +4,7 @@ import { debounce, each, map } from 'lodash'
 import Project from './Project'
 
 export default class extends EventEmitter {
-  constructor ({ clock, covers, index, scene, sizes, titlesFills }) {
+  constructor({ clock, covers, index, scene, sizes, titlesFills }) {
     super()
 
     this.name = 'Home'
@@ -16,22 +16,22 @@ export default class extends EventEmitter {
 
     this.position = {
       current: 0,
-      previous: 0
+      previous: 0,
     }
 
     this.scroll = {
       clamp: {
         minimum: 0,
-        maximum: 0
+        maximum: 0,
       },
       values: {
         current: 0,
-        target: 0
+        target: 0,
       },
       y: {
         end: 0,
-        start: 0
-      }
+        start: 0,
+      },
     }
 
     this.createProjects(covers, titlesFills)
@@ -45,18 +45,18 @@ export default class extends EventEmitter {
   /**
    * Create.
    */
-  createProjects (covers, titlesFills) {
+  createProjects(covers, titlesFills) {
     this.projects = map(covers, (information, index) => {
       return new Project({
         cover: covers[index],
         fill: titlesFills[index],
         index,
-        sizes: this.sizes
+        sizes: this.sizes,
       })
     })
   }
 
-  onTouchDown ({ y }) {
+  onTouchDown({ y }) {
     this.isDown = true
 
     this.scroll.values.current = this.position.current
@@ -66,7 +66,7 @@ export default class extends EventEmitter {
     this.onHoldStart()
   }
 
-  onTouchMove ({ y }) {
+  onTouchMove({ y }) {
     if (!this.isDown) {
       return
     }
@@ -76,14 +76,14 @@ export default class extends EventEmitter {
     this.scroll.values.target = this.scroll.values.current + (this.scroll.y.start - this.scroll.y.end)
   }
 
-  onTouchUp ({ y }) {
+  onTouchUp({ y }) {
     this.isDown = false
 
     this.onCheck()
     this.onHoldEnd()
   }
 
-  onWheel (speed) {
+  onWheel(speed) {
     this.scroll.values.target += speed
 
     this.onCheckDebounce()
@@ -92,29 +92,29 @@ export default class extends EventEmitter {
     this.onHoldEndDebounce()
   }
 
-  onHoldStart () {
-    each(this.projects, child => {
+  onHoldStart() {
+    each(this.projects, (child) => {
       child.onTouchStart()
     })
   }
 
-  onHoldEnd () {
-    each(this.projects, child => {
+  onHoldEnd() {
+    each(this.projects, (child) => {
       child.onTouchEnd()
     })
   }
 
-  onCheck () {
-    this.scroll.values.target = (this.sizes.environment.height * 1.33) * this.indexInfinite
+  onCheck() {
+    this.scroll.values.target = this.sizes.environment.height * 1.33 * this.indexInfinite
   }
 
-  onResize ({ sizes, titlesFills }) {
+  onResize({ sizes, titlesFills }) {
     this.sizes = sizes
 
     each(this.projects, (child, index) => {
       child.onResize({
         fill: titlesFills[index],
-        sizes
+        sizes,
       })
     })
   }
@@ -122,16 +122,16 @@ export default class extends EventEmitter {
   /**
    * Animations.
    */
-  show (pathname) {
-    each(this.projects, project => {
+  show(pathname) {
+    each(this.projects, (project) => {
       this.scene.add(project)
 
       project.show(this.current === project, pathname)
     })
   }
 
-  hide (pathname) {
-    const promises = map(this.projects, project => {
+  hide(pathname) {
+    const promises = map(this.projects, (project) => {
       return project.hide(this.current === project, pathname, () => {
         this.scene.remove(project)
 
@@ -145,7 +145,7 @@ export default class extends EventEmitter {
   /**
    * Set.
    */
-  set (value) {
+  set(value) {
     if (this.index === value) {
       return
     }
@@ -176,7 +176,7 @@ export default class extends EventEmitter {
   /**
    * Update.
    */
-  update () {
+  update() {
     const height = this.sizes.environment.height * 1.33
 
     this.indexInfinite = Math.round(this.scroll.values.target / height)
@@ -203,12 +203,12 @@ export default class extends EventEmitter {
 
     const time = this.clock.getElapsedTime()
 
-    each(this.projects, child => {
+    each(this.projects, (child) => {
       child.animate(time)
     })
   }
 
-  calculate () {
+  calculate() {
     const height = this.sizes.environment.height * 1.33
     const heightTotal = height * this.covers.length
 
@@ -220,7 +220,7 @@ export default class extends EventEmitter {
       this.direction = 'none'
     }
 
-    each(this.projects, child => {
+    each(this.projects, (child) => {
       child.isAfter = child.position.y < -height
       child.isBefore = child.position.y > height
 
@@ -249,7 +249,7 @@ export default class extends EventEmitter {
   /**
    * Getters.
    */
-  get background () {
+  get background() {
     return this.current.background
   }
 }

@@ -6,7 +6,7 @@ import Background from './Background'
 import Title from './Title'
 
 export default class extends EventEmitter {
-  constructor ({ cover, index, scene, sizes, titlesFills, titlesStrokes }) {
+  constructor({ cover, index, scene, sizes, titlesFills, titlesStrokes }) {
     super()
 
     this.index = index
@@ -17,28 +17,28 @@ export default class extends EventEmitter {
     this.createTitles(sizes, titlesFills, titlesStrokes)
   }
 
-  createBackground (cover, sizes) {
+  createBackground(cover, sizes) {
     this.background = new Background({
       cover,
-      sizes
+      sizes,
     })
   }
 
-  createTitles (sizes, titlesFills, titlesStrokes) {
+  createTitles(sizes, titlesFills, titlesStrokes) {
     this.titles = map(titlesFills, (value, index) => {
       const title = new Title({
         fill: titlesFills[index],
         index,
         sizes,
-        stroke: titlesStrokes && titlesStrokes[index]
+        stroke: titlesStrokes && titlesStrokes[index],
       })
 
       return title
     })
   }
 
-  animate (next, previous) {
-    return new Promise(resolve => {
+  animate(next, previous) {
+    return new Promise((resolve) => {
       const ease = Power3.easeInOut
 
       /**
@@ -48,38 +48,57 @@ export default class extends EventEmitter {
       const { background: previousBackground } = previous
 
       const isBackgroundFromFrontToBack = previousBackground.position.z > nextBackground.position.z
-      const isBackgroundDifferentPosition = Math.round(previousBackground.position.z) !== Math.round(nextBackground.position.z)
+      const isBackgroundDifferentPosition =
+        Math.round(previousBackground.position.z) !== Math.round(nextBackground.position.z)
 
       this.scene.add(this.background)
 
       const timeline = new TimelineMax({
-        onComplete: resolve
+        onComplete: resolve,
       })
 
       if (isBackgroundDifferentPosition) {
-        timeline.fromTo(this.background.material.uniforms.distortion, 0.75, {
-          value: 0
-        }, {
-          ease,
-          repeat: 1,
-          yoyo: true,
-          value: isBackgroundFromFrontToBack ? -3 : 3
-        }, 'start')
+        timeline.fromTo(
+          this.background.material.uniforms.distortion,
+          0.75,
+          {
+            value: 0,
+          },
+          {
+            ease,
+            repeat: 1,
+            yoyo: true,
+            value: isBackgroundFromFrontToBack ? -3 : 3,
+          },
+          'start',
+        )
       }
 
-      timeline.fromTo(this.background.material.uniforms.scale, 1.5, {
-        value: previousBackground.material.uniforms.scale.value
-      }, {
-        ease,
-        value: nextBackground.material.uniforms.scale.value
-      }, 'start')
+      timeline.fromTo(
+        this.background.material.uniforms.scale,
+        1.5,
+        {
+          value: previousBackground.material.uniforms.scale.value,
+        },
+        {
+          ease,
+          value: nextBackground.material.uniforms.scale.value,
+        },
+        'start',
+      )
 
-      timeline.fromTo(this.background.position, 1.5, {
-        z: previousBackground.position.z
-      }, {
-        ease,
-        z: nextBackground.position.z
-      }, 'start')
+      timeline.fromTo(
+        this.background.position,
+        1.5,
+        {
+          z: previousBackground.position.z,
+        },
+        {
+          ease,
+          z: nextBackground.position.z,
+        },
+        'start',
+      )
 
       timeline.call(() => {
         this.scene.remove(this.background)
@@ -125,16 +144,22 @@ export default class extends EventEmitter {
         const isTitleDifferentScaling = previousTitle.scaling !== nextTitle.scaling
 
         if (isTitleDifferentScaling) {
-          timeline.fromTo(title.scale, 1.5, {
-            x: previousTitle.scaling,
-            y: previousTitle.scaling,
-            z: previousTitle.scaling
-          }, {
-            ease,
-            x: nextTitle.scaling,
-            y: nextTitle.scaling,
-            z: nextTitle.scaling
-          }, 'start')
+          timeline.fromTo(
+            title.scale,
+            1.5,
+            {
+              x: previousTitle.scaling,
+              y: previousTitle.scaling,
+              z: previousTitle.scaling,
+            },
+            {
+              ease,
+              x: nextTitle.scaling,
+              y: nextTitle.scaling,
+              z: nextTitle.scaling,
+            },
+            'start',
+          )
         } else {
           title.scale.x = previousTitle.scaling
           title.scale.y = previousTitle.scaling
@@ -150,16 +175,22 @@ export default class extends EventEmitter {
             y += this.sizes.environment.height * 1.33
           }
 
-          timeline.fromTo(title.position, 1.5, {
-            x: previousTitlePosition.x,
-            y: previousTitlePosition.y,
-            z: previousTitlePosition.z
-          }, {
-            ease,
-            x: nextTitlePosition.x,
-            y,
-            z: nextTitlePosition.z
-          }, 'start')
+          timeline.fromTo(
+            title.position,
+            1.5,
+            {
+              x: previousTitlePosition.x,
+              y: previousTitlePosition.y,
+              z: previousTitlePosition.z,
+            },
+            {
+              ease,
+              x: nextTitlePosition.x,
+              y,
+              z: nextTitlePosition.z,
+            },
+            'start',
+          )
         }
 
         if (next.name === 'Home') {
@@ -171,16 +202,22 @@ export default class extends EventEmitter {
             y += this.sizes.environment.height * 1.33
           }
 
-          timeline.fromTo(title.position, 1.5, {
-            x: previousTitlePosition.x,
-            y: previousTitlePosition.y,
-            z: previousTitlePosition.z
-          }, {
-            ease,
-            x: nextTitlePosition.x,
-            y,
-            z: nextTitlePosition.z
-          }, 'start')
+          timeline.fromTo(
+            title.position,
+            1.5,
+            {
+              x: previousTitlePosition.x,
+              y: previousTitlePosition.y,
+              z: previousTitlePosition.z,
+            },
+            {
+              ease,
+              x: nextTitlePosition.x,
+              y,
+              z: nextTitlePosition.z,
+            },
+            'start',
+          )
         }
 
         if (next.name === 'Indexes') {
@@ -192,40 +229,64 @@ export default class extends EventEmitter {
             y += this.sizes.environment.height * 1.33
           }
 
-          timeline.fromTo(title.position, 1.5, {
-            x: previousTitlePosition.x,
-            y,
-            z: previousTitlePosition.z
-          }, {
-            ease,
-            x: nextTitlePosition.x,
-            y: nextTitlePosition.y + nextTitle.parent.position.y,
-            z: nextTitlePosition.z
-          }, 'start')
+          timeline.fromTo(
+            title.position,
+            1.5,
+            {
+              x: previousTitlePosition.x,
+              y,
+              z: previousTitlePosition.z,
+            },
+            {
+              ease,
+              x: nextTitlePosition.x,
+              y: nextTitlePosition.y + nextTitle.parent.position.y,
+              z: nextTitlePosition.z,
+            },
+            'start',
+          )
         }
 
-        timeline.fromTo(title.material.uniforms.distortion, 0.75, {
-          value: 0
-        }, {
-          ease,
-          repeat: 1,
-          yoyo: true,
-          value: isTitleFromFrontToBack ? -5 : 5
-        }, 'start')
+        timeline.fromTo(
+          title.material.uniforms.distortion,
+          0.75,
+          {
+            value: 0,
+          },
+          {
+            ease,
+            repeat: 1,
+            yoyo: true,
+            value: isTitleFromFrontToBack ? -5 : 5,
+          },
+          'start',
+        )
 
-        timeline.fromTo(title.material.uniforms.transition, 1.5, {
-          value: previousTitle.material.uniforms.transition.value
-        }, {
-          ease,
-          value: nextTitle.material.uniforms.transition.value
-        }, 'start')
+        timeline.fromTo(
+          title.material.uniforms.transition,
+          1.5,
+          {
+            value: previousTitle.material.uniforms.transition.value,
+          },
+          {
+            ease,
+            value: nextTitle.material.uniforms.transition.value,
+          },
+          'start',
+        )
 
-        timeline.fromTo(title.material.uniforms.alpha, 1.5, {
-          value: previousTitle.material.uniforms.alpha.value
-        }, {
-          ease,
-          value: nextTitle.material.uniforms.alpha.value
-        }, 'start')
+        timeline.fromTo(
+          title.material.uniforms.alpha,
+          1.5,
+          {
+            value: previousTitle.material.uniforms.alpha.value,
+          },
+          {
+            ease,
+            value: nextTitle.material.uniforms.alpha.value,
+          },
+          'start',
+        )
 
         timeline.call(() => {
           this.scene.remove(title)

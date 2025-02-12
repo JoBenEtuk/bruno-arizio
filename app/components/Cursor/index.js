@@ -5,40 +5,40 @@ import { getOffset } from 'utils/dom'
 import { lerp, map } from 'utils/math'
 
 export default class {
-  constructor ({ size }) {
+  constructor({ size }) {
     this.arrows = {
       color: 'rgba(255, 255, 255, 0)',
       scale: {
         target: 0,
-        value: 0
-      }
+        value: 0,
+      },
     }
 
     this.bullet = {
       position: {
         x: window.innerWidth / 2,
-        y: window.innerHeight / 2
+        y: window.innerHeight / 2,
       },
       scale: {
         target: 3,
-        value: 3
-      }
+        value: 3,
+      },
     }
 
     this.circle = {
       position: {
         x: window.innerWidth / 2,
-        y: window.innerHeight / 2
+        y: window.innerHeight / 2,
       },
       scale: {
         target: 30,
-        value: 30
-      }
+        value: 30,
+      },
     }
 
     this.mouse = {
       x: window.innerWidth / 2,
-      y: window.innerHeight / 2
+      y: window.innerHeight / 2,
     }
 
     this.ratio = size / 10
@@ -54,14 +54,14 @@ export default class {
   /**
    * Create.
    */
-  createElement () {
+  createElement() {
     this.element = document.createElement('div')
     this.element.className = 'cursor'
 
     document.body.appendChild(this.element)
   }
 
-  createCanvas () {
+  createCanvas() {
     this.canvas = document.createElement('canvas')
     this.canvas.className = 'cursor__canvas'
     this.canvas.height = window.innerHeight
@@ -75,7 +75,7 @@ export default class {
   /**
    * Events.
    */
-  onLinkEnter (event) {
+  onLinkEnter(event) {
     if (this.isHolding) {
       return
     }
@@ -84,13 +84,13 @@ export default class {
     this.magnet = event.target.querySelector('[data-link-magnet]')
 
     if (this.focus) {
-      this.circle.scale.target = (this.focus.clientWidth / 2) + this.ratio * 10
+      this.circle.scale.target = this.focus.clientWidth / 2 + this.ratio * 10
     } else if (this.magnet) {
       this.circle.scale.target = this.magnet.firstChild.clientWidth / 2 + this.ratio * 20
     }
   }
 
-  onLinkMove (event) {
+  onLinkMove(event) {
     if (this.isHolding) {
       return
     }
@@ -106,12 +106,12 @@ export default class {
 
       TweenMax.to(this.magnet, 0.3, {
         x: dx * magnetWidth * 0.7,
-        y: dy * magnetHeight * 0.7
+        y: dy * magnetHeight * 0.7,
       })
     }
   }
 
-  onLinkLeave () {
+  onLinkLeave() {
     if (this.isHolding) {
       return
     }
@@ -121,7 +121,7 @@ export default class {
     if (this.magnet) {
       TweenMax.to(this.magnet, 0.3, {
         x: 0,
-        y: 0
+        y: 0,
       })
 
       this.magnet = null
@@ -130,7 +130,7 @@ export default class {
     this.circle.scale.target = 30
   }
 
-  onTouchDown () {
+  onTouchDown() {
     if (this.focus) {
       return
     }
@@ -144,16 +144,16 @@ export default class {
     this.circle.scale.target = 10
 
     TweenMax.to(this.arrows, 0.3, {
-      color: 'rgba(255, 255, 255, 1)'
+      color: 'rgba(255, 255, 255, 1)',
     })
   }
 
-  onTouchMove ({ x, y }) {
+  onTouchMove({ x, y }) {
     this.mouse.x = x
     this.mouse.y = y
   }
 
-  onTouchUp () {
+  onTouchUp() {
     if (this.focus) {
       return
     }
@@ -167,11 +167,11 @@ export default class {
     this.circle.scale.target = 30
 
     TweenMax.to(this.arrows, 0.3, {
-      color: 'rgba(255, 255, 255, 0)'
+      color: 'rgba(255, 255, 255, 0)',
     })
   }
 
-  onResize ({ size }) {
+  onResize({ size }) {
     this.ratio = size / 10
 
     this.canvas.height = window.innerHeight
@@ -181,14 +181,14 @@ export default class {
   /**
    * Preload.
    */
-  onPreloadComplete () {
+  onPreloadComplete() {
     TweenMax.to(this.element, 1, {
-      autoAlpha: 1
+      autoAlpha: 1,
     })
 
     this.elements = document.querySelectorAll('[data-link]')
 
-    each(this.elements, element => {
+    each(this.elements, (element) => {
       element.addEventListener('mouseenter', this.onLinkEnterEvent)
       element.addEventListener('mousemove', this.onLinkMoveEvent)
       element.addEventListener('mouseleave', this.onLinkLeaveEvent)
@@ -198,19 +198,19 @@ export default class {
   /**
    * Navigation.
    */
-  onNavigationStart () {
+  onNavigationStart() {
     this.focus = null
 
     if (this.magnet) {
       TweenMax.to(this.magnet, 0.3, {
         x: 0,
-        y: 0
+        y: 0,
       })
     }
 
     this.magnet = null
 
-    each(this.elements, element => {
+    each(this.elements, (element) => {
       element.removeEventListener('mouseenter', this.onLinkEnterEvent)
       element.removeEventListener('mousemove', this.onLinkMoveEvent)
       element.removeEventListener('mouseleave', this.onLinkLeaveEvent)
@@ -221,7 +221,7 @@ export default class {
     this.circle.scale.target = 0
   }
 
-  onNavigationEnd () {
+  onNavigationEnd() {
     this.arrows.scale.target = 0
     this.bullet.scale.target = 3
     this.circle.scale.target = 30
@@ -229,7 +229,7 @@ export default class {
     window.requestAnimationFrame(() => {
       this.elements = document.querySelectorAll('[data-link]')
 
-      each(this.elements, element => {
+      each(this.elements, (element) => {
         element.addEventListener('mouseenter', this.onLinkEnterEvent)
         element.addEventListener('mousemove', this.onLinkMoveEvent)
         element.addEventListener('mouseleave', this.onLinkLeaveEvent)
@@ -240,7 +240,7 @@ export default class {
   /**
    * Update.
    */
-  update () {
+  update() {
     this.arrows.scale.value = lerp(this.arrows.scale.value, this.arrows.scale.target, 0.1)
     this.bullet.scale.value = lerp(this.bullet.scale.value, this.bullet.scale.target, 0.1)
     this.circle.scale.value = lerp(this.circle.scale.value, this.circle.scale.target, 0.1)

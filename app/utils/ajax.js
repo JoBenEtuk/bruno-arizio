@@ -1,6 +1,6 @@
 /* global XMLHttpRequest */
 
-export function get (url) {
+export function get(url) {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest()
     const done = 4
@@ -21,7 +21,7 @@ export function get (url) {
   })
 }
 
-export function post (url, params) {
+export function post(url, params) {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest()
     const done = 4

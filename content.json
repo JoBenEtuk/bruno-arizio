@@ -1,0 +1,2327 @@
+[
+    {
+        "id": "XbRq2xQAACYAZiFG",
+        "uid": null,
+        "url": null,
+        "type": "essays",
+        "href": "https://bruno-arizio.cdn.prismic.io/api/v2/documents/search?ref=X0glABAAAGYIIvXz&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XbRq2xQAACYAZiFG%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-10-26T15:48:46+0000",
+        "last_publication_date": "2020-08-27T21:26:24+0000",
+        "slugs": [
+            "-essays-short-stories"
+        ],
+        "linked_documents": [],
+        "lang": "en-us",
+        "alternate_languages": [],
+        "data": {
+            "title": [
+                {
+                    "type": "heading1",
+                    "text": "— Essays\n& Short Stories",
+                    "spans": []
+                }
+            ],
+            "list": [
+                {
+                    "text": "How to Find Your Voice in Web Design, Interview with Ran Segall — Flux, 2020",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "f6eb88b3-306c-4e4f-8362-59b580d79eb8",
+                        "url": "https://youtu.be/BAE9G4-ScSw"
+                    }
+                },
+                {
+                    "text": "Studio Maertens Case Study Interview — Communication Arts Magazine, 2020",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "6884872d-ac53-4656-ba14-0c95e3f3753e",
+                        "url": "https://www.commarts.com/webpicks/studio-m-rtens"
+                    }
+                },
+                {
+                    "text": "The FWA Insights - Interview",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "007ec070-2b94-4489-8e11-9281e8f0c231",
+                        "url": "https://thefwa.com/article/insights-bruno-arizio"
+                    }
+                },
+                {
+                    "text": "Portfolio Case Study — Codrops, 2019",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "e3e30ba0-5654-4243-84a6-2f48e8617374",
+                        "url": "https://tympanus.net/codrops/2019/12/18/case-study-portfolio-of-bruno-arizio/"
+                    }
+                },
+                {
+                    "text": "Making the Switch from Design Agency to Product Company — Prototypr, 2019",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "ddd47fa8-9ee8-4a54-b432-9babc6b6f3b4",
+                        "url": "https://blog.prototypr.io/a-year-in-my-life-making-the-switch-from-design-agency-to-product-company-94e04317a752"
+                    }
+                },
+                {
+                    "text": "7 design magazines that every designer should know and read — Prototypr, 2017",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "c70e8a65-ac13-47cd-964e-f340bb35f7ac",
+                        "url": "https://blog.prototypr.io/7-design-magazines-that-every-digital-creative-should-know-and-read-34e7d34510d0"
+                    }
+                },
+                {
+                    "text": "No Creative Process is the same, find yours and embrace it — Prototypr, 2017",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "8ca0e7f9-def8-4da5-8315-ac2d67b86665",
+                        "url": "https://blog.prototypr.io/no-creative-process-is-the-same-find-yours-and-embrace-it-5df89137e533"
+                    }
+                },
+                {
+                    "text": "Mixing different mindsets to build better products — Prototypr, 2017",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "e701c7ae-bbd7-43d6-b334-24470e058e2a",
+                        "url": "https://blog.prototypr.io/mixing-different-mindsets-to-build-better-products-39e2712ae1e4"
+                    }
+                },
+                {
+                    "text": "How to organize your thoughts and do better writing — Independent, 2017",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "836e3d08-1a0f-470e-80ab-7d89ce394fe4",
+                        "url": "https://medium.com/@brunoarizio/draft-on-writing-2696f167f19"
+                    }
+                },
+                {
+                    "text": "Por que empresas de tecnologia estão simplificando seus logotipos?  — Independent, 2015",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "4a097845-ce02-4b37-8416-781ffb4d76cd",
+                        "url": "https://medium.com/@brunoarizio/por-que-as-grandes-empresas-de-tecnologia-estão-simplificando-seus-logotipos-af440db227ef"
+                    }
+                }
+            ],
+            "description": [
+                {
+                    "type": "paragraph",
+                    "text": "If you are interested in the making of Urbanising The Digital Landscape you can dive into the Notes & Sources index here",
+                    "spans": [
+                        {
+                            "start": 116,
+                            "end": 120,
+                            "type": "hyperlink",
+                            "data": {
+                                "link_type": "Web",
+                                "url": "https://docs.google.com/document/d/14b9SXp0Fn6cqJLkRxA-oqvUKFqyANraLXCCYNBzH38k/edit?usp=sharing"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "link": "Read It"
+        }
+    },
+    {
+        "id": "XbRiPBQAACUAZftF",
+        "uid": "area-g",
+        "url": null,
+        "type": "project",
+        "href": "https://bruno-arizio.cdn.prismic.io/api/v2/documents/search?ref=X0glABAAAGYIIvXz&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XbRiPBQAACUAZftF%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-10-26T15:11:58+0000",
+        "last_publication_date": "2020-04-14T02:30:44+0000",
+        "slugs": [
+            "area-g",
+            "area.g"
+        ],
+        "linked_documents": [],
+        "lang": "en-us",
+        "alternate_languages": [],
+        "data": {
+            "name": "Area G",
+            "highlight": "Yes",
+            "type": "Black",
+            "label": "Design, Creative Direction",
+            "year": 2019,
+            "description": "Founded by Alexandre Gama, Marcio Ribas, and Silvia Tommasini, Area.G is a new independent creative communication firm part of Inovnation Hub. This is the second project in partnership with Kaleidoz lead by Helio Rosas, and the photographer Gustavo Lacerda. Together we devised this cinematographic atmosphere for Area.G's visual identity.",
+            "body": [
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1600,
+                                "height": 1029
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/3be93079-6029-47d7-8270-38fb43f55e21_1.png?auto=compress,format",
+                            "id": "XpUgCRAAAP74OaRz",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$ebabf2f9-c90b-4d40-bfbb-99f942eb1b21",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1600,
+                                "height": 1111
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/d96fa467-4854-4ab1-a53c-5f1e07836a29_2.png?auto=compress,format",
+                            "id": "XpUgCxAAACUAOaR9",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$0316bbe6-c525-419d-9654-0fc29ea901b2",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "highlight": "Together we devised this cinematographic atmosphere for Area.G's visual identity."
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "highlight$15800dff-e7df-4946-ac03-7ca96998dbd6",
+                    "slice_type": "highlight",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1600,
+                                "height": 865
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/878be6e3-0319-4d47-8f01-9dd1fa8ab296_3.png?auto=compress,format",
+                            "id": "XpUgBRAAAKUIOaRh",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$e12c7cf7-84b5-4606-a6a4-e41b2585bedb",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1600,
+                                "height": 910
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/816768f6-acf7-434b-8d52-c22c1917f546_4.png?auto=compress,format",
+                            "id": "XpUgDBAAAP74OaSC",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$509db747-e853-4d4c-abb0-bd8ad1818809",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1600,
+                                "height": 907
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/862767ac-3d3c-48de-8952-a32c85820c6e_5.png?auto=compress,format",
+                            "id": "XpUgGBAAABQCOaS6",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$15ab1bdd-18fa-4fe9-982c-f35b4de4367d",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1602,
+                                "height": 1754
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/56a9f6d8-4788-4d35-81a5-fac6b6c84da0_7.png?auto=compress,format",
+                            "id": "XpUgHRAAACUAOaTV",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$ec111191-611b-44ce-9056-ff39b6da1461",
+                    "slice_type": "image",
+                    "slice_label": null
+                }
+            ],
+            "phone": {
+                "dimensions": {
+                    "width": 1797,
+                    "height": 1346
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/15c09267-00c1-4a70-b7a1-2f56c5b62e93_EN0025.jpg?auto=compress,format",
+                "id": "XnKU_xAAACQAonES",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "#fff"
+                }
+            },
+            "tablet": {
+                "dimensions": {
+                    "width": 1797,
+                    "height": 1346
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/15c09267-00c1-4a70-b7a1-2f56c5b62e93_EN0025.jpg?auto=compress,format",
+                "id": "XnKU_xAAACQAonES",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "#fff"
+                }
+            },
+            "desktop": {
+                "dimensions": {
+                    "width": 1797,
+                    "height": 1346
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/15c09267-00c1-4a70-b7a1-2f56c5b62e93_EN0025.jpg?auto=compress,format",
+                "id": "XnKU_xAAACQAonES",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "#fff"
+                }
+            },
+            "fill": {
+                "dimensions": {
+                    "width": 2187,
+                    "height": 738
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/6b4c73e9-c2c9-46aa-9654-8ec863817a18_area-g.png?auto=compress,format",
+                "id": "Xbt98BIAACUAPzMr",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                }
+            },
+            "stroke": {
+                "dimensions": {
+                    "width": 2187,
+                    "height": 738
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/b2655dea-308a-4b63-9721-5f60c60ac3b1_area-g-stroke.png?auto=compress,format",
+                "id": "Xbt98RIAACIAPzMu",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                }
+            }
+        }
+    },
+    {
+        "id": "XLfhthQAAOBU5xA_",
+        "uid": null,
+        "url": null,
+        "type": "about",
+        "href": "https://bruno-arizio.cdn.prismic.io/api/v2/documents/search?ref=X0glABAAAGYIIvXz&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XLfhthQAAOBU5xA_%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-04-18T02:32:26+0000",
+        "last_publication_date": "2020-06-11T18:55:51+0000",
+        "slugs": [
+            "designer-creative-director-and-jury-at-the-awwwards",
+            "designer-creative-director-and-jury-at-the-awwwards.",
+            "designer-creative-director-andjury-at-the-awwwards.",
+            "designer-and-creative-director.awwwards-judge.",
+            "designer-and-creative-director.awwwards-judge-2020.",
+            "designer-and-creative-director.currently-at-toptal-and-awwwards-judge-2020.",
+            "bruno-arizio-is-an-independent-creative-director-and-designer.shaping-new-experiences-at-toptal-and-judging-websites-at-the-awwwards.",
+            "bruno-arizio-is-an-independent-creative-director-and-designer.currently-shaping-new-experiences-at-toptal-and-judging-websites-at-the-awwwards.",
+            "bruno-arizio-is-an-independent-creative-director-and-designer.currently-shaping-new-experiences-at-toptal-and-judging-websites-at-the-awwwards",
+            "bruno-arizio-is-an-independent-creative-director-and-designer.-currently-shaping-new-experiences-at-toptal-and-judging-websites-at-the-awwwards",
+            "bruno-arizio-is-an-interactive-designer.-crafting-new-experiences-at-toptal-and-judging-websites-at-the-awwwards",
+            "bruno-arizio-is-an-interactive-designer.-crafting-new-experiences-at-toptal-and-judging-websites-at-the-awwwards.",
+            "bruno-arizio-is-an-interactive-designer-currently-crafting-engagingexperiences-at-toptal-and-a-proud-member-of-the-awwwards-jury.",
+            "bruno-arizio-is-an-interactive-designer-currently-crafting-engaging-experiences-at-toptal-and-a-proud-member-of-the-awwwards-jury.",
+            "bruno-arizio-is-an-interactive-designer-currently-crafting-new-engaging-experiences-at-toptal-and-a-proud-member-of-the-awwwards-jury.",
+            "bruno-arizio-is-aninteractive-designercurrently-crafting-newengaging-experiences-at-toptal-and-a-proud-member-of-the-awwwards-jury.",
+            "bruno-arizio-is-aninteractive-designercurrently-crafting-newexperiences-at-toptal-andjudging-websites-at-theawwwards.",
+            "bruno-arizio-is-aninteractive-designercurrently-crafting-newexperiences-at-toptal-andjudging-websites-at-theawwwards",
+            "bruno-arizio-is-aninteractive-designer.currently-crafting-newexperiences-at-toptal-andjudging-websites-at-theawwwards.",
+            "bruno-arizio-is-aninteractive-designer.currently-crafting-newexperiences-at-toptal-andjudging-websites-at-theawwwards-young-jury."
+        ],
+        "linked_documents": [],
+        "lang": "en-us",
+        "alternate_languages": [],
+        "data": {
+            "title": [
+                {
+                    "type": "heading1",
+                    "text": "DESIGNER, CREATIVE DIRECTOR, AND JURY AT THE AWWWARDS",
+                    "spans": [
+                        {
+                            "start": 45,
+                            "end": 53,
+                            "type": "hyperlink",
+                            "data": {
+                                "link_type": "Web",
+                                "url": "http://awwwards.com/brunoarizio/",
+                                "target": "_blank"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "description": [
+                {
+                    "type": "paragraph",
+                    "text": "Over the past 10 years Bruno has worked across the Atlantic for clients and agencies in the United Kingdom, The Netherlands, Germany, Italy, United States, Canada, and Brazil — arching from financial, retail, food & drink, outsourcing, and non-profit organisations. These companies includes Facebook, Toyota, Samsung, Pepsi, Gatorade and agencies such as Jam3, Sapient Razorfish, Nurun, among many others.",
+                    "spans": []
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Currently writing a book called Urbanising The Digital Landscape\nto investigate the influence of the Architectural International Style on the current web landscape.",
+                    "spans": [
+                        {
+                            "start": 32,
+                            "end": 64,
+                            "type": "hyperlink",
+                            "data": {
+                                "link_type": "Web",
+                                "url": "https://docs.google.com/document/d/14b9SXp0Fn6cqJLkRxA-oqvUKFqyANraLXCCYNBzH38k/edit?usp=sharing",
+                                "target": "_blank"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "contact_title": "Work Inquiries",
+            "contact_list": [
+                {
+                    "text": "hello@brunoarizio.com",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "706a362e-94ac-4cd2-968d-d3e2b0757ea5",
+                        "url": "mailto:hello@brunoarizio.com"
+                    }
+                }
+            ],
+            "social_title": "Social",
+            "social_list": [
+                {
+                    "text": "Twitter",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "01ee646c-f352-4840-ab3e-356b0610aebb",
+                        "url": "https://twitter.com/brunoarizio"
+                    }
+                },
+                {
+                    "text": "Instagram",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "5849cf0f-e0de-4465-b10e-72d37c6b65e7",
+                        "url": "https://www.instagram.com/brunoarizio/"
+                    }
+                },
+                {
+                    "text": "Behance",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "a5d44647-d0e9-4472-aff9-5995c677e32e",
+                        "url": "https://www.behance.net/brunoarizio",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "text": "LinkedIn",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "e752b3c5-d7eb-47a3-8953-eda42393e8f9",
+                        "url": "https://linkedin.com/in/brunoarizio"
+                    }
+                },
+                {
+                    "text": "Medium",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "1f6fc85a-0a85-4a2e-8ea6-cadff0b8dc11",
+                        "url": "https://medium.com/@brunoarizio"
+                    }
+                }
+            ],
+            "awards_title": "Awards, Publication & Recognition",
+            "awards_list": [
+                {
+                    "text": "Awwwards Site of the Day - Studio Mærtens",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "Awwwards Developer Award - Studio Mærtens",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "Awwwards Mobile Excellence - Studio Mærtens",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "Awwwards Honorable Mention - Studio Mærtens",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "Awwwards Site of the Day - Erika Moreira",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "e78d7573-55cf-4d2b-8136-cca6cf6fbbb4",
+                        "url": "https://www.awwwards.com/sites/erika-moreira-portfolio",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "text": "Awwwards Mobile Excellence - Erika Moreira",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "a742f835-06bb-4238-a642-7a26cec8566f",
+                        "url": "https://www.awwwards.com/sites/erika-moreira-portfolio",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "text": "Awwwards Developer Award - Erika Moreira",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "930649b4-20bf-458f-b869-7cd23de2d7be",
+                        "url": "https://www.awwwards.com/sites/erika-moreira-portfolio",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "text": "Awwwards Honorable Mention - Erika Moreira",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "c07ef5b9-187b-419f-84a1-11f9da51db30",
+                        "url": "https://www.awwwards.com/sites/erika-moreira-portfolio",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "text": "Awwwards Site of the Day - Bruno Arizio",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "de94bd13-a30f-4c0b-9c17-a3b764851d33",
+                        "url": "https://www.awwwards.com/sites/bruno-arizio-portfolio",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "text": "Awwwards Mobile Excelence - Bruno Arizio",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "23e2aae9-1c2b-401f-9066-98d1fd813ab2",
+                        "url": "https://www.awwwards.com/sites/bruno-arizio-portfolio",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "text": "Awwwards Developer Award - Bruno Arizio",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "38a2c55d-154c-4dc8-90a2-cfa4d735e7c9",
+                        "url": "https://www.awwwards.com/sites/bruno-arizio-portfolio",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "text": "Awwwards Honorable Mention - Bruno Arizio",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "66b7fb22-d12b-4254-a19f-714eaa0c37dd",
+                        "url": "https://www.awwwards.com/sites/bruno-arizio-portfolio",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "text": "Awwwards - Jury 2020",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "Awwwards - Jury 2019",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "The FWA, FOTD - Studio Mærtens",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "The FWA, FOTD - Bruno Arizio",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "846674f4-06e4-44d5-8579-02e76edccf80",
+                        "url": "https://thefwa.com/cases/bruno-arizio-portfolio",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "text": "The FWA Editorial - Interview",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "9b6614ce-a097-4a0c-bf62-be155975b1c4",
+                        "url": "https://thefwa.com/article/insights-bruno-arizio"
+                    }
+                },
+                {
+                    "text": "The FWA Nominee - Erika Moreira",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "fab800fc-5a9f-492c-bb13-d5ea051346e8",
+                        "url": "https://thefwa.com/cases/erika-moreira-portfolio",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "text": "CSSDA Design Awards, WOTD - Studio Mærtens",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "CSSDA Design Awards, Best Innovation - Studio Mærtens",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "CSSDA Design Awards, Best UI/UX - Studio Mærtens",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "CSSDA Design Awards, WOTD - Erika Moreira",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "d7481472-b25b-4186-8e36-2114fd61aba6",
+                        "url": "https://www.cssdesignawards.com/sites/erika-moreira-portfolio/36741/"
+                    }
+                },
+                {
+                    "text": "CSSDA Design Awards, Best Innovation - Erika Moreira",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "6a9d4886-0c0c-47ae-aa7e-2939e3e041a1",
+                        "url": "https://www.cssdesignawards.com/sites/erika-moreira-portfolio/36741/"
+                    }
+                },
+                {
+                    "text": "CSSDA Design Awards, Best UI/UX - Erika Moreira",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "bbe8423c-f3ba-4f06-beb2-e5e876d130f6",
+                        "url": "https://www.cssdesignawards.com/sites/erika-moreira-portfolio/36741/"
+                    }
+                },
+                {
+                    "text": "CSS Design Winner - Claudia M. Salles",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "AIGA Featured - Studio Mærtens",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "AIGA Featured - Bruno Arizio",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "AIGA Featured - Erika Moreira",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "AIGA Featured - Saura®",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "Behance Interaction Gallery Featured - Studio Mærtens",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "Behance Interaction Gallery Featured - Erika Moreira",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "Behance Interaction Gallery Featured - Bruno Arizio",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "Typewolf SOTD - Erika Moreira",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "Under Consideration: Brand New - Toptal Logo Redesign",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "Mindsparkle Mag Featured - Bruno Arizio",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "eb31392e-c1c0-466b-99e2-b37b4fd329b1",
+                        "url": "https://mindsparklemag.com/website/bruno-arizio-portfolio-by-bruno-arizio-luis-henrique-bizarro/",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "text": "Codrops Inspirational Websites Roundup #13",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "Codrops Case Study - Bruno Arizio",
+                    "link": {
+                        "link_type": "Web",
+                        "key": "883a30c3-f41c-45b6-84f1-30b1c97b4d7b",
+                        "url": "https://tympanus.net/codrops/2019/12/18/case-study-portfolio-of-bruno-arizio/",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "text": "Collective #565 Inspirational Website of the Week",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                },
+                {
+                    "text": "Lurzer’s Archive Featured - Natura Care",
+                    "link": {
+                        "link_type": "Any"
+                    }
+                }
+            ],
+            "credits": [
+                {
+                    "type": "paragraph",
+                    "text": "Coded by LHBZR",
+                    "spans": [
+                        {
+                            "start": 9,
+                            "end": 14,
+                            "type": "hyperlink",
+                            "data": {
+                                "link_type": "Web",
+                                "url": "https://lhbzr.com/"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "id": "XbOjahQAACUAYrQ_",
+        "uid": null,
+        "url": null,
+        "type": "navigation",
+        "href": "https://bruno-arizio.cdn.prismic.io/api/v2/documents/search?ref=X0glABAAAGYIIvXz&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XbOjahQAACUAYrQ_%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-10-26T01:37:48+0000",
+        "last_publication_date": "2020-07-21T22:54:14+0000",
+        "slugs": [
+            "bruno-arizio"
+        ],
+        "linked_documents": [],
+        "lang": "en-us",
+        "alternate_languages": [],
+        "data": {
+            "logo": "Bruno Arizio—",
+            "links": [
+                {
+                    "text": "Index",
+                    "link": "/index"
+                },
+                {
+                    "text": "About",
+                    "link": "/about"
+                },
+                {
+                    "text": "Essays",
+                    "link": "/essays"
+                },
+                {
+                    "text": "Behance",
+                    "link": "https://behance.net/brunoarizio"
+                },
+                {
+                    "text": "Instagram",
+                    "link": "https://www.instagram.com/brunoarizio/"
+                }
+            ]
+        }
+    },
+    {
+        "id": "XL5cLzEAAEMA8iQ0",
+        "uid": "erika-moreira",
+        "url": null,
+        "type": "project",
+        "href": "https://bruno-arizio.cdn.prismic.io/api/v2/documents/search?ref=X0glABAAAGYIIvXz&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XL5cLzEAAEMA8iQ0%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-04-23T00:28:38+0000",
+        "last_publication_date": "2020-03-18T22:00:37+0000",
+        "slugs": [
+            "erika-moreira",
+            "no"
+        ],
+        "linked_documents": [],
+        "lang": "en-us",
+        "alternate_languages": [],
+        "data": {
+            "name": "Erika Moreira",
+            "highlight": "No",
+            "type": "Black",
+            "label": "Visual Design",
+            "year": 2019,
+            "description": "The portfolio of Erika Moreira, the award-winning copywriter that happens to be my lovely wife, is a particularly interesting project that I’m very proud to have worked on. A rather simple layout and structure to present her top-notch work started as a colour experiment after spending months studying colour relationships based on the works of Josef Albers that emphasises the tone of each case of her incredible career.",
+            "body": [
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1569
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/c9c1f5ef-d5ce-4a37-b0b0-3c04b61d2a73_image+1.png?auto=compress,format",
+                            "id": "XnKVFRAAACUAonFy",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$27df6008-b6fb-47d6-931c-1514a3b61669",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "mp4": "https://bruno-arizio.nyc3.digitaloceanspaces.com/Comp%201%20-%20freeze.mp4",
+                        "height": 1200,
+                        "width": 1600
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "video$f4ff1585-b8ae-447e-9454-22de1a9fcf81",
+                    "slice_type": "video",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "mp4": "https://bruno-arizio.nyc3.digitaloceanspaces.com/Comp%204.mp4",
+                        "height": 1200,
+                        "width": 1600
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "video$be6372c1-dd7d-46ad-ac49-3bfc4b5a65b0",
+                    "slice_type": "video",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "highlight": "A rather simple layout and structure to present her top-notch work"
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "highlight$75dfc1b5-f091-4e20-b4d8-033c0430121d",
+                    "slice_type": "highlight",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1829
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/07b1cdd7-1640-4cd3-aa2c-6899baf7fd71_image+4.png?auto=compress,format",
+                            "id": "XnKW0hAAACQAonko",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$6651d21a-1655-45fa-a145-d272f98f7f88",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1668
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/f093d924-35c7-4927-a779-af7bd0ab25e1_about-page-erika.png?auto=compress,format",
+                            "id": "XnKWeRAAACUAoneh",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$ef5ebf5a-ddb1-45bf-8556-5d4ce81e7b9f",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "mp4": "https://bruno-arizio.nyc3.digitaloceanspaces.com/Comp%202.mp4",
+                        "height": 1200,
+                        "width": 1600
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "video$25aa6e3f-b29e-4b2b-ab72-625e924df9fb",
+                    "slice_type": "video",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "mp4": "https://bruno-arizio.nyc3.digitaloceanspaces.com/Comp%203.mp4",
+                        "height": 1200,
+                        "width": 1600
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "video$33f68f12-da00-4219-80cf-bbfcdf5cc7ac",
+                    "slice_type": "video",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1186
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/869bbe4f-e1ac-46d0-8811-b7fe841ee563_image+3.png?auto=compress,format",
+                            "id": "XnKVDhAAACMAonFR",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$f1d21373-5932-43dd-9114-40b866dcdd81",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "mp4": "https://bruno-arizio.nyc3.digitaloceanspaces.com/Comp%206.mp4",
+                        "height": 1200,
+                        "width": 1600
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "video$3f24e601-51b9-4ad0-bab5-8213e1b04c6b",
+                    "slice_type": "video",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "mp4": "https://bruno-arizio.nyc3.digitaloceanspaces.com/Comp%205.mp4",
+                        "height": 1200,
+                        "width": 1600
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "video$bd824815-5119-4b11-90f7-91df746d86d5",
+                    "slice_type": "video",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1544
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/bd0a618d-e289-4168-ba05-6d0537109bcd_image+5.png?auto=compress,format",
+                            "id": "XnKVGxAAACQAonGN",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$6f7647e6-8ee8-410a-8245-64e0e9f2de91",
+                    "slice_type": "image",
+                    "slice_label": null
+                }
+            ],
+            "phone": {
+                "dimensions": {
+                    "width": 1920,
+                    "height": 1087
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/bb970f39-6a5b-4f51-9b01-306938e5d61a_erika-cover.png?auto=compress,format",
+                "id": "XnKZ2xAAACMAooaY",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                }
+            },
+            "tablet": {
+                "dimensions": {
+                    "width": 1920,
+                    "height": 1087
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/bb970f39-6a5b-4f51-9b01-306938e5d61a_erika-cover.png?auto=compress,format",
+                "id": "XnKZ2xAAACMAooaY",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                }
+            },
+            "desktop": {
+                "dimensions": {
+                    "width": 1920,
+                    "height": 1087
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/bb970f39-6a5b-4f51-9b01-306938e5d61a_erika-cover.png?auto=compress,format",
+                "id": "XnKZ2xAAACMAooaY",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                }
+            },
+            "fill": {
+                "dimensions": {
+                    "width": 4246,
+                    "height": 738
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/f8bef79c-0525-43d6-9515-9eaf6e9fd29e_erika-moreira.png?auto=compress,format",
+                "id": "Xbt98RIAACIAPzMv",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                }
+            },
+            "stroke": {
+                "dimensions": {
+                    "width": 4246,
+                    "height": 738
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/676aa0ce-ec74-48b7-9a1a-7a04f37ef86c_erika-moreira-stroke.png?auto=compress,format",
+                "id": "Xbt98RIAACQAPzM5",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                }
+            }
+        }
+    },
+    {
+        "id": "XLfB0xQAAFZi5oNM",
+        "uid": "claudia-moreira-salles",
+        "url": null,
+        "type": "project",
+        "href": "https://bruno-arizio.cdn.prismic.io/api/v2/documents/search?ref=X0glABAAAGYIIvXz&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XLfB0xQAAFZi5oNM%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-04-18T00:16:21+0000",
+        "last_publication_date": "2019-11-13T20:39:13+0000",
+        "slugs": [
+            "claudia-m.-salles",
+            "1",
+            "claudia-moreira-salles"
+        ],
+        "linked_documents": [],
+        "lang": "en-us",
+        "alternate_languages": [],
+        "data": {
+            "name": "Claudia M. Salles",
+            "highlight": "Yes",
+            "type": "Black",
+            "label": "Visual Design",
+            "year": 2016,
+            "description": "Working under the supervision of Creative Director Sandro Bianco, together we built a new digital experience for Claudia Moreira Salles, undeniable amongst Brazilian most important designers of the decade,  to transform her then just released book into a digital portfolio. As a designer herself we worked very close to devise a joyful experience that do not speak louder than the work itself but rather a frame to her astonishing modernist furniture and exhibitions.",
+            "body": [
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1109
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/e09382a1-d114-4883-a02e-aa929fa7a0eb_claudia-moreira-salles-1.png?auto=compress,format",
+                            "id": "XbxAOxIAACIAQpAR",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$2a377830-0f85-4844-8f76-9c302b6675d0",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "mp4": "https://bruno-arizio.nyc3.cdn.digitaloceanspaces.com/claudia-moreira-salles-1.mp4",
+                        "height": 1080,
+                        "width": 1906
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "video$85fbbe3f-a214-4a09-8789-80c898e72d77",
+                    "slice_type": "video",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "highlight": "Abroad Claudia is represented by Espasso with galleries in Miami, New York,Los Angeles,  and London."
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "highlight$f1c9a459-a0b8-4b7f-91ea-d42f940e13c8",
+                    "slice_type": "highlight",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "mp4": "https://bruno-arizio.nyc3.cdn.digitaloceanspaces.com/claudia-moreira-salles-2.mp4",
+                        "height": 1080,
+                        "width": 1920
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "video$f29feae1-8340-4230-b34e-ef0f22b37013",
+                    "slice_type": "video",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1080
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/ae43d809-c690-4adf-92a1-e073e2cd2551_claudia-moreira-salles-2.png?auto=compress,format",
+                            "id": "XbxAOxIAACMAQpAQ",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$b0a3d371-b0af-4e38-aa4d-eecba66cea7d",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "mp4": "https://bruno-arizio.nyc3.cdn.digitaloceanspaces.com/claudia-moreira-salles-3.mp4",
+                        "height": 1080,
+                        "width": 1920
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "video$80e7e229-2477-414a-bff9-0b0ee91433ef",
+                    "slice_type": "video",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1105
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/d24217d9-cea9-492f-9736-5dae35a34830_claudia-moreira-salles-3.png?auto=compress,format",
+                            "id": "XbxAPBIAACUAQpAS",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$847c4cbe-16e4-43dd-862c-b7000ae0a8fe",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1104
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/03cdad99-8d96-4f8c-8363-2a0c03ce90fa_claudia-moreira-salles-4.png?auto=compress,format",
+                            "id": "XbxAOxIAACIAQpAL",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$bc7715cf-573a-4f9a-9cde-f06ac8db7c14",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1108
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/dfe76841-40d0-4468-b362-a35b0b73f8d8_claudia-moreira-salles-5.png?auto=compress,format",
+                            "id": "XbxAPBIAACUAQpAT",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$4ed1e474-5f0e-4b72-931a-d04346d13666",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1108
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/ea97d523-ca58-4e8e-8af5-f36e8dd10043_claudia-moreira-salles-6.png?auto=compress,format",
+                            "id": "XbxAPBIAACQAQpAU",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$3c5390ac-7f01-411f-9caa-cfa215dc6f42",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1106
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/7b513770-e15f-43d4-8507-9aaf5e008105_claudia-moreira-salles-7.png?auto=compress,format",
+                            "id": "XbxAOhIAACIAQpAE",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$e8744f6e-fd24-44f8-b605-9a10ed4dd99a",
+                    "slice_type": "image",
+                    "slice_label": null
+                }
+            ],
+            "phone": {
+                "dimensions": {
+                    "width": 1242,
+                    "height": 2478
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/63d42125-53dc-4901-af92-adeae1d8b40e_CMS+MOB.png?auto=compress,format",
+                "id": "XctF_REAACkA9gIJ",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                }
+            },
+            "tablet": {
+                "dimensions": {
+                    "width": 1920,
+                    "height": 1080
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/1a0fb6e5-e18f-425f-8b2f-77b99d1261ed_claudia-moreira-salles.jpg?auto=compress,format",
+                "id": "XbxAwBIAACMAQpJu",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "#fff"
+                }
+            },
+            "desktop": {
+                "dimensions": {
+                    "width": 1920,
+                    "height": 1080
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/1a0fb6e5-e18f-425f-8b2f-77b99d1261ed_claudia-moreira-salles.jpg?auto=compress,format",
+                "id": "XbxAwBIAACMAQpJu",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "#fff"
+                }
+            },
+            "fill": {
+                "dimensions": {
+                    "width": 5400,
+                    "height": 738
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/df28859b-d52c-41e4-b6e8-39f453f6dadb_claudia-m-salles.png?auto=compress,format",
+                "id": "Xbt98RIAACQAPzM2",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                }
+            },
+            "stroke": {
+                "dimensions": {
+                    "width": 5400,
+                    "height": 738
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/5abbb11f-095d-43a2-b156-b635be6bcd52_claudia-m-salles-stroke.png?auto=compress,format",
+                "id": "Xbt98RIAACUAPzMx",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                }
+            }
+        }
+    },
+    {
+        "id": "XbRgChQAACYAZfGB",
+        "uid": null,
+        "url": null,
+        "type": "ordering",
+        "href": "https://bruno-arizio.cdn.prismic.io/api/v2/documents/search?ref=X0glABAAAGYIIvXz&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XbRgChQAACYAZfGB%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-10-26T15:02:36+0000",
+        "last_publication_date": "2020-01-16T18:33:36+0000",
+        "slugs": [
+            "untitled-document"
+        ],
+        "linked_documents": [],
+        "lang": "en-us",
+        "alternate_languages": [],
+        "data": {
+            "list": [
+                {
+                    "project": {
+                        "id": "XbRiPBQAACUAZftF",
+                        "type": "project",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "area-g",
+                        "first_publication_date": "2019-10-26T15:11:58+0000",
+                        "last_publication_date": "2020-04-14T02:30:44+0000",
+                        "uid": "area-g",
+                        "link_type": "Document",
+                        "key": "839e03a8-5a1f-423b-aaaa-342564776995",
+                        "isBroken": false
+                    }
+                },
+                {
+                    "project": {
+                        "id": "XLe7LBQAAIBX5mXM",
+                        "type": "project",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "inovnation",
+                        "first_publication_date": "2019-04-17T23:51:13+0000",
+                        "last_publication_date": "2019-11-15T01:22:40+0000",
+                        "uid": "inovnation",
+                        "link_type": "Document",
+                        "key": "d758fad5-8c8d-42dc-8fb5-3c1f46860164",
+                        "isBroken": false
+                    }
+                },
+                {
+                    "project": {
+                        "id": "XLfB0xQAAFZi5oNM",
+                        "type": "project",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "claudia-m.-salles",
+                        "first_publication_date": "2019-04-18T00:16:21+0000",
+                        "last_publication_date": "2019-11-13T20:39:13+0000",
+                        "uid": "claudia-moreira-salles",
+                        "link_type": "Document",
+                        "key": "dcca3d46-6378-4830-be05-b99849cd1718",
+                        "isBroken": false
+                    }
+                },
+                {
+                    "project": {
+                        "id": "XLevNBQAAFZi5jCz",
+                        "type": "project",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "gatorade",
+                        "first_publication_date": "2019-04-17T23:51:22+0000",
+                        "last_publication_date": "2019-11-12T23:58:33+0000",
+                        "uid": "gatorade",
+                        "link_type": "Document",
+                        "key": "a8810c44-25c0-4ea5-91f8-a28507431a31",
+                        "isBroken": false
+                    }
+                },
+                {
+                    "project": {
+                        "id": "XL5cLzEAAEMA8iQ0",
+                        "type": "project",
+                        "tags": [],
+                        "lang": "en-us",
+                        "slug": "erika-moreira",
+                        "first_publication_date": "2019-04-23T00:28:38+0000",
+                        "last_publication_date": "2020-03-18T22:00:37+0000",
+                        "uid": "erika-moreira",
+                        "link_type": "Document",
+                        "key": "9fa82990-e449-4b73-b71e-1c5a8fa4d634",
+                        "isBroken": false
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "id": "XLe7LBQAAIBX5mXM",
+        "uid": "inovnation",
+        "url": null,
+        "type": "project",
+        "href": "https://bruno-arizio.cdn.prismic.io/api/v2/documents/search?ref=X0glABAAAGYIIvXz&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XLe7LBQAAIBX5mXM%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-04-17T23:51:13+0000",
+        "last_publication_date": "2019-11-15T01:22:40+0000",
+        "slugs": [
+            "inovnation",
+            "2"
+        ],
+        "linked_documents": [],
+        "lang": "en-us",
+        "alternate_languages": [],
+        "data": {
+            "name": "Inovnation",
+            "highlight": "Yes",
+            "type": "Black",
+            "label": "Design, Creative Direction",
+            "year": 2018,
+            "description": "Designing the digital presence for Inovnation was the first of a series of projects held with Kaleidoz, a design thinking company led by Helio Rosas part of a new innovation group led by Alexandre Gama the former Chairman of BBDO-London and founder of Neogama. For this project we partnered with graphic designer Pedro Veneziano to design a series of digital flags for the brand identity, and with Luiz Rodrigues who led the tech implementation.",
+            "body": [
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1084
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/ca95d1c0-0679-44e5-b037-49369205e908_inovnation-1.png?auto=compress,format",
+                            "id": "Xbw-yRIAACMAQomP",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$f7ceba70-9f4d-474e-b479-7011b1ce6c2f",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "mp4": "https://bruno-arizio.nyc3.cdn.digitaloceanspaces.com/inovnation-1.mp4",
+                        "height": 864,
+                        "width": 1194
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "video$b71ac9d5-eaac-4efa-98f4-84d08477c3c4",
+                    "slice_type": "video",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "highlight": "Designing the digital presence for Inovnation was the first of a series of projects held with Kaleidoz"
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "highlight$ed1a1554-412a-4c40-aee1-0a4574ba5602",
+                    "slice_type": "highlight",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1116
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/e357b3d1-bc1a-42c8-b29a-794b1c30d408_inovnation-2.png?auto=compress,format",
+                            "id": "Xbw-1xIAACMAQonS",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$71d612ef-0100-41f5-b998-8b978e543e04",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1108
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/2e2b528f-ff06-4e80-9426-e1b41090dfd9_inovnation-3.png?auto=compress,format",
+                            "id": "Xbw-xxIAACMAQomE",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$d0b7ac9c-d408-45a0-b5eb-be95609ec2e5",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "mp4": "https://bruno-arizio.nyc3.cdn.digitaloceanspaces.com/inovnation-2.mp4",
+                        "height": 1080,
+                        "width": 1924
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "video$d2c48e0a-8e6d-409d-94cf-e3f4e46e81b1",
+                    "slice_type": "video",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 3991
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/22156d5a-aa2a-4fa2-aac7-a50d067bc654_inovnation-4.jpg?auto=compress,format",
+                            "id": "Xbw-2xIAACQAQonp",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "#fff"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$baa7c95b-a4e9-44eb-94b6-f7af3a25ab49",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1080
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/2b862887-62bd-4f33-959d-c8cc842597ee_inovnation-5.png?auto=compress,format",
+                            "id": "Xbw-yhIAACQAQomY",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$e40515ad-7ea7-4e02-938a-c600f3a7b4d6",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1308
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/859cbee6-884f-4346-9875-a8406f41d484_inovnation-6.png?auto=compress,format",
+                            "id": "Xbw-yxIAACIAQomZ",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$f4f1b378-6c73-4eba-97dd-93cdba800901",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "mp4": "https://bruno-arizio.nyc3.cdn.digitaloceanspaces.com/inovnation-3.mp4",
+                        "height": 826,
+                        "width": 1150
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "video$01730370-0ecd-4368-af0e-f5c2c7c04804",
+                    "slice_type": "video",
+                    "slice_label": null
+                }
+            ],
+            "phone": {
+                "dimensions": {
+                    "width": 1242,
+                    "height": 2478
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/30cfbcd9-fa82-4cab-96e9-4603491eee2f_INOV+MOB.png?auto=compress,format",
+                "id": "XctF9hEAACgA9gHr",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                }
+            },
+            "tablet": {
+                "dimensions": {
+                    "width": 1920,
+                    "height": 1080
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/660ab7be-0cdf-4eec-bdb9-7d75c8fbcc17_inovnation.jpg?auto=compress,format",
+                "id": "Xbw_uxIAACMAQo3O",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "#fff"
+                }
+            },
+            "desktop": {
+                "dimensions": {
+                    "width": 1920,
+                    "height": 1080
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/660ab7be-0cdf-4eec-bdb9-7d75c8fbcc17_inovnation.jpg?auto=compress,format",
+                "id": "Xbw_uxIAACMAQo3O",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "#fff"
+                }
+            },
+            "fill": {
+                "dimensions": {
+                    "width": 3367,
+                    "height": 738
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/635f0f46-4179-4880-aa2c-b6c0cbec4d85_inovnation.png?auto=compress,format",
+                "id": "Xbt98RIAACIAPzMt",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                }
+            },
+            "stroke": {
+                "dimensions": {
+                    "width": 3367,
+                    "height": 738
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/4e237c2c-7dc9-476b-8267-f32e1b720dbd_inovnation-stroke.png?auto=compress,format",
+                "id": "Xbt98RIAACQAPzM3",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                }
+            }
+        }
+    },
+    {
+        "id": "XLevNBQAAFZi5jCz",
+        "uid": "gatorade",
+        "url": null,
+        "type": "project",
+        "href": "https://bruno-arizio.cdn.prismic.io/api/v2/documents/search?ref=X0glABAAAGYIIvXz&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XLevNBQAAFZi5jCz%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-04-17T23:51:22+0000",
+        "last_publication_date": "2019-11-12T23:58:33+0000",
+        "slugs": [
+            "gatorade",
+            "3",
+            "bajer"
+        ],
+        "linked_documents": [],
+        "lang": "en-us",
+        "alternate_languages": [],
+        "data": {
+            "name": "Gatorade",
+            "highlight": "Yes",
+            "type": "White",
+            "label": "Design, Creative Direction",
+            "year": 2016,
+            "description": "In 2016, a partnership between Studio—BA, 55/Brands, Talk, Box1824 was created to drive a massive consumer behaviour research for PepsiCo that would culminate in an entirely new energy drink. Our team was spread over 6 cities across 5 countries in Latin America: Colombia, Argentina, Brazil, Mexico, and Chile. \n\nThe entire research took six months to be completed and along with a book to consolidate the data we designed an iOS app: a platform for learning, fostering insights and communication across Gatorade marketing teams in different offices around the globe.",
+            "body": [
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 973,
+                                "height": 1164
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/606ff151-19c1-46ce-ac83-07dd800995eb_gatorade-1.png?auto=compress,format",
+                            "id": "Xbw2TxIAACUAQmNz",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$9e6296d5-934b-430b-b015-f9a5f7cbe587",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "highlight": "A platform for learning, foster insights and communication across Gatorade global marketing teams."
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "highlight$498a8e35-5fbe-45d6-989a-ee7ca7a431fa",
+                    "slice_type": "highlight",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1222
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/1eae4799-1543-482f-ab68-eccf610056fe_gatorade-2.png?auto=compress,format",
+                            "id": "Xbw2TxIAACUAQmN0",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$c67f95d7-cbee-41f7-8aaa-736759bc0b3f",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1080
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/04853fd8-33d7-47ef-b168-5b1935529604_gatorade-3.png?auto=compress,format",
+                            "id": "Xbw2TxIAACQAQmN1",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$bb9da24a-40ec-4f94-a46f-c22440d3a6a5",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1736
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/a9d8c5fa-0516-4514-9877-c9098b75ae2b_gatorade-4.png?auto=compress,format",
+                            "id": "Xbw2TRIAACUAQmNr",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$2d3224ec-46d6-4a50-b639-3f7cff7cef13",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1080
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/dac6f56c-282f-4965-ad33-c82bab22986f_gatorade-5.png?auto=compress,format",
+                            "id": "Xbw2UBIAACQAQmN6",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$a622d1d1-4eaf-4db1-b8c1-9850782f2725",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 1730
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/7717fd5a-4c6b-4e06-880e-5f386d344532_gatorade-6.png?auto=compress,format",
+                            "id": "Xbw2TRIAACUAQmNm",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$28cb394c-d307-4860-867a-49f8cb881d78",
+                    "slice_type": "image",
+                    "slice_label": null
+                },
+                {
+                    "primary": {
+                        "image": {
+                            "dimensions": {
+                                "width": 1920,
+                                "height": 994
+                            },
+                            "alt": null,
+                            "copyright": null,
+                            "url": "https://images.prismic.io/bruno-arizio/6b080939-db3a-4a80-b5b9-a5dde02441e2_gatorade-7.png?auto=compress,format",
+                            "id": "Xbw2ThIAACUAQmNu",
+                            "edit": {
+                                "x": 0,
+                                "y": 0,
+                                "zoom": 1,
+                                "background": "transparent"
+                            }
+                        }
+                    },
+                    "items": [
+                        {}
+                    ],
+                    "id": "image$d2a854f2-9a8c-4b24-8b8c-5a672ecfc945",
+                    "slice_type": "image",
+                    "slice_label": null
+                }
+            ],
+            "phone": {
+                "dimensions": {
+                    "width": 1242,
+                    "height": 2478
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/0415ad9f-a275-4ca3-843d-2051e5158520_GAT+MOB.png?auto=compress,format",
+                "id": "XctF_REAACgA9gIP",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                }
+            },
+            "tablet": {
+                "dimensions": {
+                    "width": 1920,
+                    "height": 1080
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/cb19e5a3-b3ab-4b3b-9ef0-cd4e12ec029f_gatorade.jpg?auto=compress,format",
+                "id": "Xbw28BIAACIAQmZC",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "#fff"
+                }
+            },
+            "desktop": {
+                "dimensions": {
+                    "width": 1920,
+                    "height": 1080
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/cb19e5a3-b3ab-4b3b-9ef0-cd4e12ec029f_gatorade.jpg?auto=compress,format",
+                "id": "Xbw28BIAACIAQmZC",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "#fff"
+                }
+            },
+            "fill": {
+                "dimensions": {
+                    "width": 3071,
+                    "height": 738
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/7c48170b-de0c-4203-8f26-3f4261b1f499_gatorade.png?auto=compress,format",
+                "id": "Xbt98RIAACQAPzMw",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                }
+            },
+            "stroke": {
+                "dimensions": {
+                    "width": 3071,
+                    "height": 738
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/ec4e520d-ac43-4fce-a4cb-c3840d5c6787_gatorade-stroke.png?auto=compress,format",
+                "id": "Xbt98RIAACMAPzM4",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                }
+            }
+        }
+    },
+    {
+        "id": "XbTq0BQAACUAaFT-",
+        "uid": null,
+        "url": null,
+        "type": "projects",
+        "href": "https://bruno-arizio.cdn.prismic.io/api/v2/documents/search?ref=X0glABAAAGYIIvXz&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XbTq0BQAACUAaFT-%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-10-27T00:54:42+0000",
+        "last_publication_date": "2019-10-28T23:26:41+0000",
+        "slugs": [
+            "scroll",
+            "go-to"
+        ],
+        "linked_documents": [],
+        "lang": "en-us",
+        "alternate_languages": [],
+        "data": {
+            "scroll": "Scroll",
+            "link": "Go to"
+        }
+    },
+    {
+        "id": "XZopohAAACIAZTVw",
+        "uid": null,
+        "url": null,
+        "type": "meta",
+        "href": "https://bruno-arizio.cdn.prismic.io/api/v2/documents/search?ref=X0glABAAAGYIIvXz&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XZopohAAACIAZTVw%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-10-06T17:51:33+0000",
+        "last_publication_date": "2019-10-19T04:14:09+0000",
+        "slugs": [
+            "bruno-arizio--interactive-designer",
+            "bruno-arizio"
+        ],
+        "linked_documents": [],
+        "lang": "en-us",
+        "alternate_languages": [],
+        "data": {
+            "image": {
+                "dimensions": {
+                    "width": 1200,
+                    "height": 630
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/bruno-arizio/692887dff6fb56f6ab2911c0914c0baca1317f0b_share.png?auto=compress,format",
+                "id": "XaqNjRAAACMArfjh",
+                "edit": {
+                    "x": 0,
+                    "y": 0,
+                    "zoom": 1,
+                    "background": "transparent"
+                }
+            },
+            "title": "Bruno Arizio — Interactive Designer",
+            "description": "Bruno Arizio is a designer and writer based in Milan, Italy. Over the past 9 years he has worked as a freelance designer for companies across the Atlantic in the US, Latin America and Europe."
+        }
+    },
+    {
+        "id": "XL8nljEAAEQA9XTK",
+        "uid": null,
+        "url": null,
+        "type": "home",
+        "href": "https://bruno-arizio.cdn.prismic.io/api/v2/documents/search?ref=X0glABAAAGYIIvXz&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XL8nljEAAEQA9XTK%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-04-23T14:56:24+0000",
+        "last_publication_date": "2019-04-23T18:04:03+0000",
+        "slugs": [
+            "explore-project"
+        ],
+        "linked_documents": [],
+        "lang": "en-us",
+        "alternate_languages": [],
+        "data": {
+            "explore": "Explore Project",
+            "scroll": "Scroll",
+            "go": "Go To"
+        }
+    }
+]

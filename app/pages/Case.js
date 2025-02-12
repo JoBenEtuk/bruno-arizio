@@ -12,7 +12,7 @@ export default class extends Page {
   /**
    * Create.
    */
-  create () {
+  create() {
     this.element = document.querySelector('.case')
 
     this.index = parseInt(this.element.dataset.index, 10)
@@ -34,16 +34,13 @@ export default class extends Page {
     this.createSliders()
   }
 
-  createAnimations () {
+  createAnimations() {
     this.animations = {}
 
-    each([
-      ...this.elements.informationTexts,
-      this.elements.informationDescription
-    ], (element, index) => {
+    each([...this.elements.informationTexts, this.elements.informationDescription], (element, index) => {
       this.animations[`animation_${index}`] = new Text({
         append: true,
-        element
+        element,
       })
 
       element.setAttribute('data-scroll', '')
@@ -52,23 +49,23 @@ export default class extends Page {
     })
   }
 
-  createScroll () {
+  createScroll() {
     this.scroll = new Scroll({
       el: this.element,
       scrollbarClass: 'scrollbar',
       smooth: true,
-      smoothMobile: true
+      smoothMobile: true,
     })
 
-    this.scroll.on('call', id => {
+    this.scroll.on('call', (id) => {
       if (this.animations[id]) {
         this.animations[id].animateIn()
       }
     })
   }
 
-  createSliders () {
-    this.sliders = map(this.elements.highlightsText, element => {
+  createSliders() {
+    this.sliders = map(this.elements.highlightsText, (element) => {
       split({ element })
       split({ element })
 
@@ -79,8 +76,8 @@ export default class extends Page {
         element,
         elements: {
           buttons,
-          items
-        }
+          items,
+        },
       })
     })
   }
@@ -88,23 +85,23 @@ export default class extends Page {
   /**
    * Events.
    */
-  onResize () {
+  onResize() {
     if (this.scroll) {
       this.scroll.update()
     }
 
-    each(this.sliders, slider => {
+    each(this.sliders, (slider) => {
       slider.onResize()
     })
   }
 
-  onWheel (speed) {
+  onWheel(speed) {
     if (speed < 0) {
-      each(this.sliders, slider => {
+      each(this.sliders, (slider) => {
         slider.onRight()
       })
     } else if (speed > 0) {
-      each(this.sliders, slider => {
+      each(this.sliders, (slider) => {
         slider.onLeft()
       })
     }
@@ -113,39 +110,60 @@ export default class extends Page {
   /**
    * Animations.
    */
-  show () {
+  show() {
     this.timelineIn = new TimelineMax()
 
-    this.timelineIn.to(this.element, 0.5, {
-      autoAlpha: 1
-    }, 'start')
+    this.timelineIn.to(
+      this.element,
+      0.5,
+      {
+        autoAlpha: 1,
+      },
+      'start',
+    )
 
-    this.timelineIn.fromTo(this.elements.headerButton, 0.5, {
-      autoAlpha: 0
-    }, {
-      autoAlpha: 1
-    }, 'start')
+    this.timelineIn.fromTo(
+      this.elements.headerButton,
+      0.5,
+      {
+        autoAlpha: 0,
+      },
+      {
+        autoAlpha: 1,
+      },
+      'start',
+    )
 
     return super.show(this.timelineIn)
   }
 
-  hide () {
+  hide() {
     this.destroy()
 
     this.timelineOut = new TimelineMax()
 
     this.timelineOut.to(this.element, 1.75, {
       ease: Power4.easeOut,
-      y: 0
+      y: 0,
     })
 
-    this.timelineOut.to(this.elements.headerButton, 0.5, {
-      autoAlpha: 0
-    }, 'start')
+    this.timelineOut.to(
+      this.elements.headerButton,
+      0.5,
+      {
+        autoAlpha: 0,
+      },
+      'start',
+    )
 
-    this.timelineOut.to(this.element, 0.5, {
-      autoAlpha: 0
-    }, 'start')
+    this.timelineOut.to(
+      this.element,
+      0.5,
+      {
+        autoAlpha: 0,
+      },
+      'start',
+    )
 
     return super.hide(this.timelineOut)
   }
@@ -153,12 +171,12 @@ export default class extends Page {
   /**
    * Destroy.
    */
-  destroy () {
+  destroy() {
     if (this.scroll) {
       this.scroll.destroy()
     }
 
-    each(this.sliders, slider => {
+    each(this.sliders, (slider) => {
       slider.destroy()
     })
   }

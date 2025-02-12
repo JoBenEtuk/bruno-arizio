@@ -4,7 +4,7 @@ import Background from './Background'
 import Titles from './Titles'
 
 export default class extends EventEmitter {
-  constructor ({ covers, index, scene, sizes, titlesFills }) {
+  constructor({ covers, index, scene, sizes, titlesFills }) {
     super()
 
     this.name = 'Case'
@@ -20,38 +20,38 @@ export default class extends EventEmitter {
   /**
    * Create.
    */
-  createBackground (covers, sizes) {
+  createBackground(covers, sizes) {
     this.background = new Background({
       covers,
-      sizes
+      sizes,
     })
   }
 
-  createTitle (sizes, titlesFills) {
+  createTitle(sizes, titlesFills) {
     this.titles = new Titles({
       sizes,
-      titlesFills
+      titlesFills,
     })
   }
 
   /**
    * Events.
    */
-  onResize ({ sizes, titlesFills }) {
+  onResize({ sizes, titlesFills }) {
     this.background.onResize({
-      sizes
+      sizes,
     })
 
     this.titles.onResize({
       sizes,
-      titlesFills
+      titlesFills,
     })
   }
 
   /**
    * Animations.
    */
-  show (page) {
+  show(page) {
     this.scene.add(this.background)
     this.scene.add(this.titles)
 
@@ -59,7 +59,7 @@ export default class extends EventEmitter {
     this.titles.show(page)
   }
 
-  hide (pathname) {
+  hide(pathname) {
     let promises = []
 
     if (this.background) {
@@ -88,7 +88,7 @@ export default class extends EventEmitter {
   /**
    * Set.
    */
-  set (value) {
+  set(value) {
     this.index = value
 
     this.background.set(this.index)

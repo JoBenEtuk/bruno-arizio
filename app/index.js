@@ -29,7 +29,7 @@ import Home from 'pages/Home'
 import { get } from 'utils/ajax'
 
 class App {
-  constructor () {
+  constructor() {
     loadCSS('/main.css')
 
     if (IS_DEVELOPMENT) {
@@ -38,7 +38,7 @@ class App {
 
     this.mouse = {
       x: window.innerWidth / 2,
-      y: window.innerHeight / 2
+      y: window.innerHeight / 2,
     }
 
     this.content = document.querySelector('.content')
@@ -53,7 +53,7 @@ class App {
     Detection.check({
       onErrorBrowser: this.createUnsupportedScreen.bind(this),
       onErrorWebGL: this.createWebGLScreen.bind(this),
-      onSuccess: this.createPreloaderScreen.bind(this)
+      onSuccess: this.createPreloaderScreen.bind(this),
     })
 
     this.addEventListeners()
@@ -64,7 +64,7 @@ class App {
   /**
    * Stats.
    */
-  createStats () {
+  createStats() {
     this.stats = new Stats()
 
     document.body.appendChild(this.stats.dom)
@@ -73,21 +73,21 @@ class App {
   /**
    * Color.
    */
-  createColor () {
+  createColor() {
     this.color = new Color()
   }
 
   /**
    * Responsive.
    */
-  createResponsive () {
+  createResponsive() {
     this.responsive = new Responsive()
   }
 
   /**
    * App.
    */
-  createApp () {
+  createApp() {
     this.createComponents()
     this.createPages()
   }
@@ -95,7 +95,7 @@ class App {
   /**
    * Preloader.
    */
-  createPreloaderScreen () {
+  createPreloaderScreen() {
     this.preloader = new Preloader()
 
     this.preloader.on('cover', this.onPreloadCover.bind(this))
@@ -107,25 +107,25 @@ class App {
     this.preloader.show()
   }
 
-  onPreloadCover (cover) {
+  onPreloadCover(cover) {
     if (this.canvas) {
       this.canvas.onPreloadCover(cover)
     }
   }
 
-  onPreloadFill (fill) {
+  onPreloadFill(fill) {
     if (this.canvas) {
       this.canvas.onPreloadFill(fill)
     }
   }
 
-  onPreloadStroke (stroke) {
+  onPreloadStroke(stroke) {
     if (this.canvas) {
       this.canvas.onPreloadStroke(stroke)
     }
   }
 
-  onPreloadComplete () {
+  onPreloadComplete() {
     if (this.canvas) {
       this.canvas.onPreloadComplete()
     }
@@ -144,16 +144,16 @@ class App {
   /**
    * Canvas.
    */
-  createCanvas () {
+  createCanvas() {
     this.canvas = new Canvas({
       size: this.responsive.size,
-      slug: this.slug
+      slug: this.slug,
     })
 
     this.canvas.on('change', this.onCanvasChange.bind(this))
   }
 
-  onCanvasChange (index) {
+  onCanvasChange(index) {
     if (this.page && this.page.onCanvasChange) {
       this.page.onCanvasChange(index)
     }
@@ -162,29 +162,29 @@ class App {
   /**
    * Cursor.
    */
-  createCursor () {
+  createCursor() {
     if (Detection.isDesktop) {
       this.cursor = new Cursor({
-        size: this.responsive.size
+        size: this.responsive.size,
       })
     }
   }
 
-  createUnsupportedScreen () {
+  createUnsupportedScreen() {
     this.unsupportedScreen = new UnsupportedScreen({
-      onContinue: () => this.createPreloaderScreen()
+      onContinue: () => this.createPreloaderScreen(),
     })
   }
 
-  createWebGLScreen () {
+  createWebGLScreen() {
     this.webGLScreen = new WebGLScreen()
   }
 
-  createComponents () {
+  createComponents() {
     this.navigation = new Navigation()
   }
 
-  createPages () {
+  createPages() {
     this.content = document.querySelector('.content')
 
     this.pages = new Map()
@@ -210,7 +210,7 @@ class App {
     this.addLinksEventListeners()
   }
 
-  onChange ({ callback = noop, push = true, url = null }) {
+  onChange({ callback = noop, push = true, url = null }) {
     if (this.isLoading || this.url === url) {
       return
     }
@@ -219,24 +219,26 @@ class App {
 
     this.isLoading = true
 
-    get(url).then(response => {
-      this.onRequest({
-        callback,
-        push,
-        response,
-        url
+    get(url)
+      .then((response) => {
+        this.onRequest({
+          callback,
+          push,
+          response,
+          url,
+        })
       })
-    }).catch(response => {
-      this.onRequest({
-        callback,
-        push,
-        response,
-        url: '/'
+      .catch((response) => {
+        this.onRequest({
+          callback,
+          push,
+          response,
+          url: '/',
+        })
       })
-    })
   }
 
-  async onRequest ({ callback, push, response, url }) {
+  async onRequest({ callback, push, response, url }) {
     if (this.cursor) {
       this.cursor.onNavigationStart()
     }
@@ -297,7 +299,7 @@ class App {
     this.addLinksEventListeners()
   }
 
-  onTouchDown (event) {
+  onTouchDown(event) {
     event.stopPropagation()
 
     this.mouse.x = event.touches ? event.touches[0].clientX : event.clientX
@@ -320,7 +322,7 @@ class App {
     }
   }
 
-  onTouchMove (event) {
+  onTouchMove(event) {
     event.stopPropagation()
 
     this.mouse.x = event.touches ? event.touches[0].clientX : event.clientX
@@ -339,7 +341,7 @@ class App {
     }
   }
 
-  onTouchUp (event) {
+  onTouchUp(event) {
     event.stopPropagation()
 
     this.mouse.x = event.changedTouches ? event.changedTouches[0].clientX : event.clientX
@@ -358,7 +360,7 @@ class App {
     }
   }
 
-  onWheel (event) {
+  onWheel(event) {
     const normalized = Normalize(event)
     const speed = normalized.pixelY * 0.2
 
@@ -371,7 +373,7 @@ class App {
     }
   }
 
-  onResize () {
+  onResize() {
     this.responsive.onResize()
 
     if (this.page && this.page.onResize) {
@@ -387,7 +389,7 @@ class App {
     }
   }
 
-  update () {
+  update() {
     if (this.stats) {
       this.stats.begin()
     }
@@ -407,7 +409,7 @@ class App {
     window.requestAnimationFrame(this.update.bind(this))
   }
 
-  addEventListeners () {
+  addEventListeners() {
     this.onResizeDebounce = debounce(this.onResize.bind(this), 500)
 
     window.addEventListener('resize', this.onResizeDebounce)
@@ -424,16 +426,16 @@ class App {
     window.addEventListener('touchend', this.onTouchUp.bind(this))
   }
 
-  addLinksEventListeners () {
+  addLinksEventListeners() {
     const links = document.querySelectorAll('a')
 
-    each(links, link => {
+    each(links, (link) => {
       if (link.href.indexOf('localhost') > -1 || link.href.indexOf('brunoarizio.com') > -1) {
-        link.onclick = event => {
+        link.onclick = (event) => {
           event.preventDefault()
 
           this.onChange({
-            url: link.href
+            url: link.href,
           })
         }
       } else if (link.href.indexOf('mailto') === -1) {

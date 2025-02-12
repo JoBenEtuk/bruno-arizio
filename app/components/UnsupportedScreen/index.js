@@ -1,15 +1,15 @@
 export default class {
-  constructor () {
+  constructor() {
     this.element = document.querySelector('#unsupported-screen')
 
     this.show()
   }
 
-  show () {
+  show() {
     this.element.classList.remove('unsupported--disabled')
   }
 
-  hide () {
+  hide() {
     this.element.classList.add('unsupported--disabled')
   }
 }

@@ -1,8 +1,8 @@
 import SemverCompare from 'semver-compare'
-import UAParser from 'ua-parser-js'
+import { UAParser } from 'ua-parser-js'
 
 class DetectionManager {
-  constructor () {
+  constructor() {
     this.parser = new UAParser()
     this.device = this.parser.getDevice()
 
@@ -23,22 +23,28 @@ class DetectionManager {
     }
 
     this.supported = {
-      desktop: [{
-        browser: 'chrome',
-        minversion: 70
-      }, {
-        browser: 'firefox',
-        minversion: 60
-      }, {
-        browser: 'safari',
-        minversion: 11
-      }, {
-        browser: 'edge',
-        minversion: 16
-      }, {
-        browser: 'opera',
-        minversion: 58
-      }]
+      desktop: [
+        {
+          browser: 'chrome',
+          minversion: 70,
+        },
+        {
+          browser: 'firefox',
+          minversion: 60,
+        },
+        {
+          browser: 'safari',
+          minversion: 11,
+        },
+        {
+          browser: 'edge',
+          minversion: 16,
+        },
+        {
+          browser: 'opera',
+          minversion: 58,
+        },
+      ],
     }
 
     this.isMobile = this.checkMobile()
@@ -54,11 +60,11 @@ class DetectionManager {
     if (typeof window.getComputedStyle(document.body).mixBlendMode === 'undefined') {
       this.isMixBlendModeUnsupported = true
 
-      document.documentElement.className += ' mix-blend-mode-unsupported';
+      document.documentElement.className += ' mix-blend-mode-unsupported'
     }
   }
 
-  compareVersions (a, b) {
+  compareVersions(a, b) {
     if (typeof a === 'string' || a instanceof String) {
       return SemverCompare(a, b) <= 0
     }
@@ -66,7 +72,7 @@ class DetectionManager {
     return a <= parseInt(b, 10)
   }
 
-  isSupported () {
+  isSupported() {
     let supported = false
 
     if (this.checkAppBrowser()) {
@@ -77,8 +83,8 @@ class DetectionManager {
       return true
     }
 
-    this.supported[this.type].every(device => {
-      supported = Object.keys(device).every(requirement => {
+    this.supported[this.type].every((device) => {
+      supported = Object.keys(device).every((requirement) => {
         let value = device[requirement]
 
         switch (requirement) {
@@ -112,7 +118,7 @@ class DetectionManager {
     return supported
   }
 
-  isWebGLAvailable () {
+  isWebGLAvailable() {
     try {
       const canvas = document.createElement('canvas')
 
@@ -122,17 +128,17 @@ class DetectionManager {
     }
   }
 
-  checkAppBrowser () {
+  checkAppBrowser() {
     const ua = navigator.userAgent || navigator.vendor || window.opera
 
-    if ((ua.indexOf('FBAN') > -1) || (ua.indexOf('FBAV') > -1) || (ua.indexOf('Twitter') > -1)) {
+    if (ua.indexOf('FBAN') > -1 || ua.indexOf('FBAV') > -1 || ua.indexOf('Twitter') > -1) {
       return true
     }
 
     return false
   }
 
-  checkEdge ()  {
+  checkEdge() {
     const browser = this.parser.getBrowser().name
 
     const isEdge = browser === 'Edge'
@@ -141,7 +147,7 @@ class DetectionManager {
     return isEdge && isNotMobile
   }
 
-  checkFirefox () {
+  checkFirefox() {
     const browser = this.parser.getBrowser().name
 
     const isFirefox = browser === 'Firefox'
@@ -150,7 +156,7 @@ class DetectionManager {
     return isFirefox && isNotMobile
   }
 
-  checkIE () {
+  checkIE() {
     const browser = this.parser.getBrowser().name
     const ua = navigator.userAgent || navigator.vendor || window.opera
 
@@ -161,7 +167,7 @@ class DetectionManager {
     return isInternetExplorer && isNotMobile && isNotMaxthon
   }
 
-  checkSafari () {
+  checkSafari() {
     const browser = this.parser.getBrowser().name
 
     const isSafari = browser.indexOf('Safari') > -1
@@ -170,19 +176,19 @@ class DetectionManager {
     return isSafari && isNotMobile
   }
 
-  checkMobile () {
+  checkMobile() {
     return this.checkPhone() || this.checkTablet()
   }
 
-  checkPhone () {
+  checkPhone() {
     return this.type === 'phone'
   }
 
-  checkTablet () {
+  checkTablet() {
     return this.type === 'tablet'
   }
 
-  check ({ onErrorBrowser, onErrorWebGL, onSuccess }) {
+  check({ onErrorBrowser, onErrorWebGL, onSuccess }) {
     if (!this.isWebGLAvailable()) {
       onErrorWebGL()
     } else if (this.isSupported()) {

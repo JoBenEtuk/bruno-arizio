@@ -1,15 +1,10 @@
-import {
-  Mesh,
-  PlaneBufferGeometry,
-  ShaderMaterial,
-  Vector2
-} from 'three'
+import { Mesh, PlaneBufferGeometry, ShaderMaterial, Vector2 } from 'three'
 
 import fragmentShader from 'shaders/preloader-frag.glsl'
 import vertexShader from 'shaders/preloader-vert.glsl'
 
 export default class extends Mesh {
-  constructor ({ clock, cover, sizes }) {
+  constructor({ clock, cover, sizes }) {
     super()
 
     this.clock = clock
@@ -24,7 +19,7 @@ export default class extends Mesh {
   /**
    * Create.
    */
-  createGeometry ({ environment }) {
+  createGeometry({ environment }) {
     this.height = environment.height
     this.width = environment.width
 
@@ -33,76 +28,96 @@ export default class extends Mesh {
     this.position.z = 0
   }
 
-  createMaterial ({ screen }) {
+  createMaterial({ screen }) {
     this.material = new ShaderMaterial({
       depthTest: false,
       depthWrite: false,
       uniforms: {
         alpha: {
-          value: 0
+          value: 0,
         },
         displacementX: {
-          value: 0.5
+          value: 0.5,
         },
         displacementY: {
-          value: 0.5
+          value: 0.5,
         },
         grayscale: {
-          value: 0
+          value: 0,
         },
         image: {
-          value: this.cover
+          value: this.cover,
         },
         imageResolution: {
-          value: new Vector2(this.cover.image.width, this.cover.image.height)
+          value: new Vector2(this.cover.image.width, this.cover.image.height),
         },
         resolution: {
           type: 'v2',
-          value: new Vector2(screen.width, screen.height)
+          value: new Vector2(screen.width, screen.height),
         },
         time: {
-          value: 0
-        }
+          value: 0,
+        },
       },
       transparent: true,
       fragmentShader,
-      vertexShader
+      vertexShader,
     })
   }
 
   /**
    * Animations.
    */
-  show () {
-    return new Promise(resolve => {
+  show() {
+    return new Promise((resolve) => {
       TweenMax.to(this.material.uniforms.alpha, 1, {
         onComplete: resolve,
-        value: 0.1
+        value: 0.1,
       })
     })
   }
 
-  hide () {
-    return new Promise(resolve => {
+  hide() {
+    return new Promise((resolve) => {
       this.timelineOut = new TimelineMax({
-        onComplete: resolve
+        onComplete: resolve,
       })
 
-      this.timelineOut.to(this.material.uniforms.alpha, 1.5, {
-        value: 1
-      }, 'start')
+      this.timelineOut.to(
+        this.material.uniforms.alpha,
+        1.5,
+        {
+          value: 1,
+        },
+        'start',
+      )
 
-      this.timelineOut.to(this.material.uniforms.displacementX, 1.5, {
-        value: 0
-      }, 'start')
+      this.timelineOut.to(
+        this.material.uniforms.displacementX,
+        1.5,
+        {
+          value: 0,
+        },
+        'start',
+      )
 
-      this.timelineOut.to(this.material.uniforms.displacementY, 1.5, {
-        value: 0
-      }, 'start')
+      this.timelineOut.to(
+        this.material.uniforms.displacementY,
+        1.5,
+        {
+          value: 0,
+        },
+        'start',
+      )
 
-      this.timelineOut.to(this.material.uniforms.grayscale, 1.5, {
-        value: 1
-      }, 'start')
+      this.timelineOut.to(
+        this.material.uniforms.grayscale,
+        1.5,
+        {
+          value: 1,
+        },
+        'start',
+      )
 
       this.timelineOut.call(() => {
         this.destroy()
@@ -113,7 +128,7 @@ export default class extends Mesh {
   /**
    * Events.
    */
-  onResize ({ sizes }) {
+  onResize({ sizes }) {
     if (this.geometry) {
       this.destroyGeometry()
       this.createGeometry(sizes)
@@ -127,26 +142,26 @@ export default class extends Mesh {
   /**
    * Update.
    */
-  update () {
+  update() {
     this.material.uniforms.time.value = this.clock.getElapsedTime()
   }
 
   /**
    * Destroy.
    */
-  destroyGeometry () {
+  destroyGeometry() {
     if (this.geometry) {
       this.geometry.dispose()
     }
   }
 
-  destroyMaterial () {
+  destroyMaterial() {
     if (this.material) {
       this.material.dispose()
     }
   }
 
-  destroy () {
+  destroy() {
     this.destroyGeometry()
     this.destroyMaterial()
   }

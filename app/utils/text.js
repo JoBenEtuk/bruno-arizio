@@ -1,16 +1,16 @@
 import { each } from 'lodash'
 
-export function split ({ element, expression = ' ', append = true }) {
+export function split({ element, expression = ' ', append = true }) {
   const words = splitText(element.innerHTML.toString(), expression)
 
   let innerHTML = ''
 
-  each(words, line => {
+  each(words, (line) => {
     if (line.indexOf('<br>') > -1) {
       const lines = line.split('<br>')
 
       each(lines, (line, index) => {
-        innerHTML += (index > 0) ? '<br>' + parseLine(line) : parseLine(line)
+        innerHTML += index > 0 ? '<br>' + parseLine(line) : parseLine(line)
       })
     } else {
       innerHTML += parseLine(line)
@@ -22,7 +22,7 @@ export function split ({ element, expression = ' ', append = true }) {
   const spans = element.querySelectorAll('span')
 
   if (append) {
-    each(spans, span => {
+    each(spans, (span) => {
       const isSingleLetter = span.textContent.length === 1
       const isNotEmpty = span.innerHTML.trim() !== ''
       const isNotAnd = span.textContent !== '&'
@@ -36,7 +36,7 @@ export function split ({ element, expression = ' ', append = true }) {
   return spans
 }
 
-export function calculate (spans) {
+export function calculate(spans) {
   let lines = []
   let words = []
 
@@ -64,7 +64,7 @@ export function calculate (spans) {
   return lines
 }
 
-function splitText (text, expression) {
+function splitText(text, expression) {
   const splits = text.split('<br>')
 
   let words = []
@@ -81,8 +81,11 @@ function splitText (text, expression) {
 
     let innerHTML = []
 
-    each(words, word => {
-      if (!isLink && (word.includes('<a') || word.includes('<strong') || word.includes('<span') || word.includes('<svg'))) {
+    each(words, (word) => {
+      if (
+        !isLink &&
+        (word.includes('<a') || word.includes('<strong') || word.includes('<span') || word.includes('<svg'))
+      ) {
         link = ''
 
         isLink = true
@@ -92,7 +95,10 @@ function splitText (text, expression) {
         link += ` ${word}`
       }
 
-      if (isLink && (word.includes('/a>') || word.includes('/strong>') || word.includes('/span>') || word.includes('/svg>'))) {
+      if (
+        isLink &&
+        (word.includes('/a>') || word.includes('/strong>') || word.includes('/span>') || word.includes('/svg>'))
+      ) {
         innerHTML.push(link)
 
         link = ''
@@ -102,7 +108,10 @@ function splitText (text, expression) {
         innerHTML.push(word)
       }
 
-      if (isLink && (word.includes('/a>') || word.includes('/strong>') || word.includes('/span>') || word.includes('/svg>'))) {
+      if (
+        isLink &&
+        (word.includes('/a>') || word.includes('/strong>') || word.includes('/span>') || word.includes('/svg>'))
+      ) {
         isLink = false
       }
     })
@@ -113,10 +122,10 @@ function splitText (text, expression) {
   return words
 }
 
-function parseLine (line) {
+function parseLine(line) {
   if (line === '' || line === ' ') {
     return line
   } else {
-    return (line === '<br>') ? '<br>' : `<span>${line}</span>` + ((line.length > 1) ? ' ' : '')
+    return line === '<br>' ? '<br>' : `<span>${line}</span>` + (line.length > 1 ? ' ' : '')
   }
 }

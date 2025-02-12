@@ -1,14 +1,7 @@
 import EventEmitter from 'events'
 import { find, first, map, orderBy } from 'lodash'
 
-import {
-  Clock,
-  LinearFilter,
-  Math as THREEMath,
-  PerspectiveCamera,
-  Scene,
-  WebGLRenderer
-} from 'three'
+import { Clock, LinearFilter, Math as THREEMath, PerspectiveCamera, Scene, WebGLRenderer } from 'three'
 
 import Case from './Case'
 import Home from './Home'
@@ -17,7 +10,7 @@ import Preloader from './Preloader'
 import Transition from './Transition'
 
 export default class Canvas extends EventEmitter {
-  constructor ({ size, slug }) {
+  constructor({ size, slug }) {
     super()
 
     this.clock = new Clock()
@@ -36,35 +29,35 @@ export default class Canvas extends EventEmitter {
     this.sizes = {
       environment: {
         height: 0,
-        width: 0
+        width: 0,
       },
       retina: Math.min(window.devicePixelRatio, 2),
       ratio: size / 10,
       screen: {
         height: window.innerHeight,
-        width: window.innerWidth
-      }
+        width: window.innerWidth,
+      },
     }
 
     this.position = {
       x: 0,
-      y: 0
+      y: 0,
     }
 
     this.scroll = {
       current: 0,
       previous: 0,
-      target: 0
+      target: 0,
     }
 
     this.x = {
       start: 0,
-      end: 0
+      end: 0,
     }
 
     this.y = {
       start: 0,
-      end: 0
+      end: 0,
     }
 
     this.onIndexChangeEvent = this.onIndexChange.bind(this)
@@ -78,15 +71,15 @@ export default class Canvas extends EventEmitter {
 
     this.sizes.environment = {
       height,
-      width
+      width,
     }
 
     this.update()
   }
 
-  createRenderer () {
+  createRenderer() {
     this.renderer = new WebGLRenderer({
-      alpha: true
+      alpha: true,
     })
 
     this.renderer.setPixelRatio(this.sizes.retina)
@@ -97,7 +90,7 @@ export default class Canvas extends EventEmitter {
     document.body.appendChild(this.renderer.domElement)
   }
 
-  createScene () {
+  createScene() {
     this.scene = new Scene()
 
     this.camera = new PerspectiveCamera(45, this.sizes.screen.width / this.sizes.screen.height, 1, 500)
@@ -107,17 +100,17 @@ export default class Canvas extends EventEmitter {
   /**
    * Preloader.
    */
-  createPreloader (cover) {
+  createPreloader(cover) {
     this.preloader = new Preloader({
       clock: this.clock,
       cover,
-      sizes: this.sizes
+      sizes: this.sizes,
     })
 
     this.scene.add(this.preloader)
   }
 
-  onPreloadCover (texture) {
+  onPreloadCover(texture) {
     texture.generateMipmaps = false
     texture.minFilter = LinearFilter
     texture.needsUpdate = true
@@ -135,7 +128,7 @@ export default class Canvas extends EventEmitter {
     this.covers = orderBy(this.covers, 'index')
   }
 
-  onPreloadFill (texture) {
+  onPreloadFill(texture) {
     texture.generateMipmaps = false
     texture.minFilter = LinearFilter
     texture.needsUpdate = true
@@ -146,7 +139,7 @@ export default class Canvas extends EventEmitter {
     this.titlesFills = orderBy(this.titlesFills, 'index')
   }
 
-  onPreloadStroke (texture) {
+  onPreloadStroke(texture) {
     texture.generateMipmaps = false
     texture.minFilter = LinearFilter
     texture.needsUpdate = true
@@ -157,7 +150,7 @@ export default class Canvas extends EventEmitter {
     this.titlesStrokes = orderBy(this.titlesStrokes, 'index')
   }
 
-  async onPreloadComplete () {
+  async onPreloadComplete() {
     const covers = map(this.data, ({ uid }) => {
       return find(this.covers, { uid })
     })
@@ -178,12 +171,12 @@ export default class Canvas extends EventEmitter {
   /**
    * Navigation.
    */
-  onChange (currentSlug, previousSlug, index) {
+  onChange(currentSlug, previousSlug, index) {
     if (index !== undefined) {
       this.onIndexChange(index)
     }
 
-    return new Promise(async resolve => {
+    return new Promise(async (resolve) => {
       this.previousPage = this.currentPage
       this.currentPage = null
 
@@ -193,7 +186,7 @@ export default class Canvas extends EventEmitter {
           index: this.index,
           scene: this.scene,
           sizes: this.sizes,
-          titlesFills: this.titlesFills
+          titlesFills: this.titlesFills,
         })
 
         this.currentPage.on('change', this.onIndexChangeEvent)
@@ -207,7 +200,7 @@ export default class Canvas extends EventEmitter {
           index: this.index,
           scene: this.scene,
           sizes: this.sizes,
-          titlesFills: this.titlesFills
+          titlesFills: this.titlesFills,
         })
 
         this.currentPage.on('change', this.onIndexChangeEvent)
@@ -221,7 +214,7 @@ export default class Canvas extends EventEmitter {
           scene: this.scene,
           sizes: this.sizes,
           titlesFills: this.titlesFills,
-          titlesStrokes: this.titlesStrokes
+          titlesStrokes: this.titlesStrokes,
         })
 
         this.currentPage.on('change', this.onIndexChangeEvent)
@@ -237,7 +230,7 @@ export default class Canvas extends EventEmitter {
             scene: this.scene,
             sizes: this.sizes,
             titlesFills: this.titlesFills,
-            titlesStrokes: this.titlesStrokes
+            titlesStrokes: this.titlesStrokes,
           })
 
           await this.transition.animate(this.currentPage, this.previousPage)
@@ -257,25 +250,25 @@ export default class Canvas extends EventEmitter {
   /**
    * Touch.
    */
-  onTouchDown (event) {
+  onTouchDown(event) {
     if (this.currentPage && this.currentPage.onTouchDown) {
       this.currentPage.onTouchDown(event)
     }
   }
 
-  onTouchMove (event) {
+  onTouchMove(event) {
     if (this.currentPage && this.currentPage.onTouchMove) {
       this.currentPage.onTouchMove(event)
     }
   }
 
-  onTouchUp (event) {
+  onTouchUp(event) {
     if (this.currentPage && this.currentPage.onTouchUp) {
       this.currentPage.onTouchUp(event)
     }
   }
 
-  onWheel (event) {
+  onWheel(event) {
     if (this.currentPage && this.currentPage.onWheel) {
       this.currentPage.onWheel(event)
     }
@@ -284,7 +277,7 @@ export default class Canvas extends EventEmitter {
   /**
    * Index.
    */
-  onIndexChange (index) {
+  onIndexChange(index) {
     this.index = index
 
     if (IS_DEVELOPMENT) {
@@ -297,10 +290,10 @@ export default class Canvas extends EventEmitter {
   /**
    * Resize.
    */
-  onResize ({ size }) {
+  onResize({ size }) {
     this.sizes.screen = {
       height: window.innerHeight,
-      width: window.innerWidth
+      width: window.innerWidth,
     }
 
     this.camera.aspect = this.sizes.screen.width / this.sizes.screen.height
@@ -314,21 +307,21 @@ export default class Canvas extends EventEmitter {
 
     this.sizes.environment = {
       height,
-      width
+      width,
     }
 
     if (this.currentPage) {
       if (this.slug === 'cases') {
         this.currentPage.onResize({
           sizes: this.sizes,
-          titlesFills: this.titlesFills
+          titlesFills: this.titlesFills,
         })
       }
 
       if (this.slug === 'home') {
         this.currentPage.onResize({
           sizes: this.sizes,
-          titlesFills: this.titlesFills
+          titlesFills: this.titlesFills,
         })
       }
 
@@ -336,14 +329,14 @@ export default class Canvas extends EventEmitter {
         this.currentPage.onResize({
           sizes: this.sizes,
           titlesFills: this.titlesFills,
-          titlesStrokes: this.titlesStrokes
+          titlesStrokes: this.titlesStrokes,
         })
       }
     }
 
     if (this.preloader) {
       this.preloader.onResize({
-        sizes: this.sizes
+        sizes: this.sizes,
       })
     }
 
@@ -353,7 +346,7 @@ export default class Canvas extends EventEmitter {
   /**
    * Update.
    */
-  update () {
+  update() {
     if (this.currentPage && this.currentPage.update) {
       this.currentPage.update()
     }
